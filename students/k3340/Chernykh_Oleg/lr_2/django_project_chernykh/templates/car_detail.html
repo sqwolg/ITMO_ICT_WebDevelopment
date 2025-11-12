@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали автомобиля</title>
+</head>
+<body>
+    <h1>Информация об автомобиле</h1>
+    <p>Марка: {{ car.brand }}</p>
+    <p>Модель: {{ car.model }}</p>
+    <p>Гос. номер: {{ car.license_plate }}</p>
+    <p>Цвет: {{ car.color }}</p>
+    
+    <h2>Владельцы:</h2>
+    {% if car.owners.all %}
+        <ul>
+            {% for owner in car.owners.all %}
+                <li>
+                    <a href="{% url 'owner_detail' owner.id %}">
+                        {{ owner.last_name }} {{ owner.first_name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Владельцы не указаны.</p>
+    {% endif %}
+    
+    <p>
+        <a href="{% url 'car_update' car.id %}">Редактировать</a> |
+        <a href="{% url 'car_delete' car.id %}">Удалить</a> |
+        <a href="{% url 'cars_list' %}">Вернуться к списку</a>
+    </p>
+</body>
+</html>
+

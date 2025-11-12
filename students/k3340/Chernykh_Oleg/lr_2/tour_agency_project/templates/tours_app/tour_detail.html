@@ -1,0 +1,115 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}{{ tour.title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <div class="mb-4">
+            <span class="badge bg-primary mb-2">📍 {{ tour.country }}</span>
+            <h1>{{ tour.title }}</h1>
+        </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p><strong>🏢 Турагенство:</strong> {{ tour.agency }}</p>
+                        <p><strong>📅 Период проведения:</strong><br>
+                        {{ tour.start_date|date:"d.m.Y" }} - {{ tour.end_date|date:"d.m.Y" }}</p>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <span class="badge bg-success fs-4 p-3">
+                            💰 {{ tour.price }} руб.
+                        </span>
+                    </div>
+                </div>
+                <hr>
+                <p><strong>📝 Описание:</strong></p>
+                <p class="mb-4">{{ tour.description }}</p>
+                <p><strong>💳 Условия оплаты:</strong></p>
+                <p>{{ tour.payment_terms }}</p>
+            </div>
+        </div>
+
+        <!-- Отзывы -->
+        <h3 class="mt-5">💬 Отзывы</h3>
+        {% if reviews %}
+            {% for review in reviews %}
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h6 class="card-title mb-0">
+                                <strong>👤 {{ review.user.username }}</strong>
+                            </h6>
+                            <span class="badge bg-warning text-dark fs-6">
+                                ⭐ {{ review.rating }}/10
+                            </span>
+                        </div>
+                        <p class="text-muted small mb-2">
+                            📅 Дата тура: {{ review.tour_date|date:"d.m.Y" }}
+                        </p>
+                        <p class="card-text">{{ review.text }}</p>
+                        <small class="text-muted">Опубликовано: {{ review.created_at|date:"d.m.Y H:i" }}</small>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="alert alert-info">
+                <p class="mb-0">Пока нет отзывов. Будьте первым!</p>
+            </div>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+            {% if not user_review %}
+                <a href="{% url 'create_review' tour.pk %}" class="btn btn-success mt-3">Добавить отзыв</a>
+            {% else %}
+                <div class="alert alert-info mt-3">Вы уже оставили отзыв к этому туру.</div>
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <div class="col-md-4">
+        {% if user.is_authenticated %}
+            {% if user_reservation %}
+                <div class="card sticky-top" style="top: 20px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">✅ Ваше резервирование</h5>
+                        <p class="mb-2">
+                            <strong>Статус:</strong><br>
+                            {% if user_reservation.confirmed %}
+                                <span class="badge bg-success fs-6 mt-2">✓ Подтверждено</span>
+                            {% else %}
+                                <span class="badge bg-warning fs-6 mt-2">⏳ Ожидает подтверждения</span>
+                            {% endif %}
+                        </p>
+                        <hr>
+                        <p class="text-muted small mb-3">
+                            📅 Дата резервирования:<br>
+                            {{ user_reservation.reservation_date|date:"d.m.Y H:i" }}
+                        </p>
+                        <a href="{% url 'my_reservations' %}" class="btn btn-primary w-100">Мои резервирования</a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="card sticky-top" style="top: 20px;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">🎫 Забронировать тур</h5>
+                        <p class="text-muted mb-4">Забронируйте этот тур прямо сейчас!</p>
+                        <a href="{% url 'create_reservation' tour.pk %}" class="btn btn-primary btn-lg w-100">Забронировать</a>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="card sticky-top" style="top: 20px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title mb-3">🔐 Для бронирования</h5>
+                    <p class="text-muted mb-4">Войдите или зарегистрируйтесь, чтобы забронировать тур</p>
+                    <a href="{% url 'register' %}" class="btn btn-primary w-100 mb-2">Регистрация</a>
+                    <a href="{% url 'login' %}" class="btn btn-outline-primary w-100">Войти</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

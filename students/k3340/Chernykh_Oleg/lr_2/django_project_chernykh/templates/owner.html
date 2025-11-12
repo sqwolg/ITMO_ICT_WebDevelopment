@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Детали владельца</title>
+</head>
+<body>
+    <h1>Информация о владельце</h1>
+    <p>Имя пользователя: {{owner.user.username}}</p>
+    <p>Имя: {{owner.first_name}}</p>
+    <p>Фамилия: {{owner.last_name}}</p>
+    <p>Email: {{owner.user.email}}</p>
+    <p>Номер паспорта: {{owner.passport_number}}</p>
+    <p>Домашний адрес: {{owner.address}}</p>
+    <p>Национальность: {{owner.nationality}}</p>
+    <p>Дата рождения: {{owner.birth_date}}</p>
+    <p><a href="{% url 'owners_list' %}">Вернуться к списку</a></p>
+</body>
+</html>
+

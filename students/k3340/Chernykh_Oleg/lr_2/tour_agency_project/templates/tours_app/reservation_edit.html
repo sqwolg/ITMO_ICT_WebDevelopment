@@ -1,0 +1,26 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}Редактирование резервирования{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>✏️ Редактирование резервирования</h2>
+    <p class="text-muted">Управление бронированием</p>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="alert alert-info">
+            <h5 class="alert-heading">ℹ️ Информация</h5>
+            <p class="mb-3">Для изменения резервирования удалите старое и создайте новое.</p>
+            <hr>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="{% url 'my_reservations' %}" class="btn btn-secondary me-md-2">← Назад</a>
+                <a href="{% url 'delete_reservation' reservation.pk %}" class="btn btn-danger me-md-2">🗑️ Удалить это резервирование</a>
+                <a href="{% url 'tour_detail' reservation.tour.pk %}" class="btn btn-primary">➕ Создать новое резервирование</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,92 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}Список туров{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h1>🌍 Список туров</h1>
+    <p class="text-muted">Выберите идеальное путешествие для себя</p>
+</div>
+
+<!-- Поиск -->
+<form method="get" class="mb-5">
+    <div class="row g-3">
+        <div class="col-md-10">
+            <input type="text" name="search" class="form-control form-control-lg" placeholder="🔍 Поиск по названию, агентству, описанию или стране..." value="{{ search_query }}">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary btn-lg w-100">Найти</button>
+        </div>
+    </div>
+</form>
+
+{% if tours %}
+    <div class="row g-4">
+        {% for tour in tours %}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="mb-3">
+                            <span class="badge bg-primary mb-2">📍 {{ tour.country }}</span>
+                            <h5 class="card-title">{{ tour.title }}</h5>
+                        </div>
+                        <p class="card-text flex-grow-1">
+                            <small class="text-muted d-block mb-2">
+                                <strong>🏢 Турагенство:</strong> {{ tour.agency }}
+                            </small>
+                            <small class="text-muted d-block mb-2">
+                                <strong>📅 Период:</strong> {{ tour.start_date|date:"d.m.Y" }} - {{ tour.end_date|date:"d.m.Y" }}
+                            </small>
+                            <span class="badge bg-success fs-6 mt-2">
+                                💰 {{ tour.price }} руб.
+                            </span>
+                        </p>
+                        <p class="card-text text-muted small">{{ tour.description|truncatewords:15 }}</p>
+                        <div class="mt-auto">
+                            <a href="{% url 'tour_detail' tour.pk %}" class="btn btn-primary w-100">Подробнее →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Пагинация -->
+    {% if is_paginated %}
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page=1{% if search_query %}&search={{ search_query }}{% endif %}">Первая</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">Предыдущая</a>
+                    </li>
+                {% endif %}
+                
+                <li class="page-item active">
+                    <span class="page-link">Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}</span>
+                </li>
+                
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}{% if search_query %}&search={{ search_query }}{% endif %}">Следующая</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}{% if search_query %}&search={{ search_query }}{% endif %}">Последняя</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    {% endif %}
+{% else %}
+    <div class="alert alert-info text-center">
+        <h5 class="alert-heading">🔍 Туры не найдены</h5>
+        <p class="mb-3">Попробуйте изменить параметры поиска</p>
+        {% if search_query %}
+            <a href="{% url 'tour_list' %}" class="btn btn-primary">Показать все туры</a>
+        {% endif %}
+    </div>
+{% endif %}
+{% endblock %}
+

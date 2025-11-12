@@ -1,0 +1,61 @@
+from django.db import models
+
+
+class Owner(models.Model):
+    """Car Owner"""
+    last_name = models.CharField(max_length=100, verbose_name='Last Name')
+    first_name = models.CharField(max_length=100, verbose_name='First Name')
+    birth_date = models.DateField(verbose_name='Birth Date')
+
+    class Meta:
+        verbose_name = 'Owner'
+        verbose_name_plural = 'Owners'
+
+    def __str__(self):
+        return f"{self.last_name} {self.first_name}"
+
+
+class Car(models.Model):
+    """Car"""
+    license_plate = models.CharField(max_length=20, unique=True, verbose_name='License Plate')
+    brand = models.CharField(max_length=100, verbose_name='Brand')
+    model = models.CharField(max_length=100, verbose_name='Model')
+    color = models.CharField(max_length=50, verbose_name='Color')
+    owners = models.ManyToManyField(Owner, through='Ownership', verbose_name='Owners')
+
+    class Meta:
+        verbose_name = 'Car'
+        verbose_name_plural = 'Cars'
+
+    def __str__(self):
+        return f"{self.brand} {self.model} ({self.license_plate})"
+
+
+class Ownership(models.Model):
+    """Ownership"""
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner')
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, verbose_name='Car')
+    start_date = models.DateField(verbose_name='Start Date')
+    end_date = models.DateField(null=True, blank=True, verbose_name='End Date')
+
+    class Meta:
+        verbose_name = 'Ownership'
+        verbose_name_plural = 'Ownerships'
+
+    def __str__(self):
+        return f"{self.owner} - {self.car} ({self.start_date})"
+
+
+class DriverLicense(models.Model):
+    """Driver License"""
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner')
+    license_number = models.CharField(max_length=20, unique=True, verbose_name='License Number')
+    license_type = models.CharField(max_length=10, verbose_name='License Type')
+    issue_date = models.DateField(verbose_name='Issue Date')
+
+    class Meta:
+        verbose_name = 'Driver License'
+        verbose_name_plural = 'Driver Licenses'
+
+    def __str__(self):
+        return f"{self.owner} - {self.license_number}"

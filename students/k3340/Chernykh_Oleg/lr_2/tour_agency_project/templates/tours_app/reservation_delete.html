@@ -1,0 +1,28 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}Удаление резервирования{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>⚠️ Удаление резервирования</h2>
+    <p class="text-muted">Подтвердите действие</p>
+</div>
+
+<div class="card">
+    <div class="card-body text-center">
+        <div class="mb-4">
+            <h5 class="card-title mb-3">{{ reservation.tour.title }}</h5>
+            <p class="lead">Вы уверены, что хотите удалить это резервирование?</p>
+            <p class="text-muted">Это действие нельзя отменить.</p>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="{% url 'my_reservations' %}" class="btn btn-secondary me-md-2">Отмена</a>
+                <button type="submit" class="btn btn-danger btn-lg">🗑️ Да, удалить</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

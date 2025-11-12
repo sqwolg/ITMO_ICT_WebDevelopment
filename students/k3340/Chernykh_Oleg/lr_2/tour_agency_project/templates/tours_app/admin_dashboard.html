@@ -1,0 +1,57 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}Панель администратора{% endblock %}
+
+{% block content %}
+{% if user.is_staff %}
+    <div class="text-center mb-4">
+        <h2>⚙️ Панель администратора</h2>
+        <p class="text-muted">Статистика и управление системой</p>
+    </div>
+    
+    <div class="row g-4 mb-4">
+        <div class="col-md-3">
+                <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">🌍 Всего туров</h5>
+                    <h3>{{ total_tours }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">📋 Всего резервирований</h5>
+                    <h3>{{ total_reservations }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">✅ Подтверждено</h5>
+                    <h3 class="text-success">{{ confirmed_reservations }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h5 class="card-title">⏳ Ожидают</h5>
+                    <h3 class="text-warning">{{ pending_reservations }}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+        <a href="{% url 'admin:index' %}" class="btn btn-primary btn-lg me-md-2">⚙️ Админ-панель Django</a>
+        <a href="{% url 'sold_tours_by_country' %}" class="btn btn-success btn-lg">📊 Проданные туры по странам</a>
+    </div>
+{% else %}
+    <div class="alert alert-danger">
+        У вас нет прав доступа к этой странице.
+    </div>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,56 @@
+{% extends 'tours_app/base.html' %}
+
+{% block title %}Мои резервирования{% endblock %}
+
+{% block content %}
+<div class="text-center mb-4">
+    <h2>📋 Мои резервирования</h2>
+    <p class="text-muted">Управляйте своими бронированиями</p>
+</div>
+
+{% if reservations %}
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>🎫 Тур</th>
+                    <th>📍 Страна</th>
+                    <th>📅 Период</th>
+                    <th>💰 Цена</th>
+                    <th>📆 Дата резервирования</th>
+                    <th>✅ Статус</th>
+                    <th>⚙️ Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for reservation in reservations %}
+                    <tr>
+                        <td>{{ reservation.tour.title }}</td>
+                        <td>{{ reservation.tour.country }}</td>
+                        <td>{{ reservation.tour.start_date|date:"d.m.Y" }} - {{ reservation.tour.end_date|date:"d.m.Y" }}</td>
+                        <td>{{ reservation.tour.price }} руб.</td>
+                        <td>{{ reservation.reservation_date|date:"d.m.Y H:i" }}</td>
+                        <td>
+                            {% if reservation.confirmed %}
+                                <span class="badge bg-success">Подтверждено</span>
+                            {% else %}
+                                <span class="badge bg-warning">Ожидает подтверждения</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <a href="{% url 'delete_reservation' reservation.pk %}" class="btn btn-sm btn-danger" onclick="return confirm('Вы уверены, что хотите удалить это резервирование?')">🗑️ Удалить</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <div class="alert alert-info text-center">
+        <h5 class="alert-heading">📋 Пока нет резервирований</h5>
+        <p class="mb-3">Начните планировать свое путешествие прямо сейчас!</p>
+        <a href="{% url 'tour_list' %}" class="btn btn-primary btn-lg">🌍 Посмотреть туры</a>
+    </div>
+{% endif %}
+{% endblock %}
+
