@@ -1,0 +1,1623 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация по лабораторным работам по веб-разработке">
+      
+      
+      
+      
+        <link rel="prev" href="../lab1/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Лабораторная работа №2 - Документация лабораторных работ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Документация лабораторных работ" class="md-header__button md-logo" aria-label="Документация лабораторных работ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация лабораторных работ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа №2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Переключить на тёмную тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на тёмную тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Переключить на светлую тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Документация лабораторных работ" class="md-nav__button md-logo" aria-label="Документация лабораторных работ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация лабораторных работ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Реализованный функционал
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованный функционал">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Регистрация новых пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Просмотр и резервирование туров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Просмотр и резервирование туров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Просмотр списка туров
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Детальный просмотр тура
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Резервирование туров
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Написание отзывов к турам
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Подтверждение резервирований администратором
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Таблица проданных туров по странам
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tour (Тур)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reservation (Резервирование)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review (Отзыв)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Представления (Views)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Представления (Views)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Функциональные представления
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Класс-представления
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Формы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Формы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userregistrationform" class="md-nav__link">
+    <span class="md-ellipsis">
+      UserRegistrationForm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservationform" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReservationForm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewform" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReviewForm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ-панель Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Админ-панель Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#touradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      TourAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservationadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReservationAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReviewAdmin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Шаблоны (HTML)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Шаблоны (HTML)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Базовый шаблон (base.html)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour_listhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      tour_list.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour_detailhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      tour_detail.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_reservationshtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      my_reservations.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin_dashboardhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      admin_dashboard.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sold_tours_by_countryhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      sold_tours_by_country.html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршрутизация (URLs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Маршрутизация (URLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlspy-tour_agency_projecturlspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основной файл urls.py (tour_agency_project/urls.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tours_appurlspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршруты приложения (tours_app/urls.py)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Разделение прав доступа
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разделение прав доступа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для неавторизованных пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для авторизованных пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_stafftrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для администраторов (is_staff=True)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пагинация
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Поиск
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Меню с Bootstrap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Реализованный функционал
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованный функционал">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Регистрация новых пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Просмотр и резервирование туров
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Просмотр и резервирование туров">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Просмотр списка туров
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Детальный просмотр тура
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Резервирование туров
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Написание отзывов к турам
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Подтверждение резервирований администратором
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Таблица проданных туров по странам
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tour (Тур)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reservation (Резервирование)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Review (Отзыв)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      Представления (Views)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Представления (Views)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Функциональные представления
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Класс-представления
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Формы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Формы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userregistrationform" class="md-nav__link">
+    <span class="md-ellipsis">
+      UserRegistrationForm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservationform" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReservationForm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewform" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReviewForm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ-панель Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Админ-панель Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#touradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      TourAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reservationadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReservationAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reviewadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReviewAdmin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Шаблоны (HTML)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Шаблоны (HTML)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basehtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Базовый шаблон (base.html)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour_listhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      tour_list.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tour_detailhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      tour_detail.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my_reservationshtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      my_reservations.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#admin_dashboardhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      admin_dashboard.html
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sold_tours_by_countryhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      sold_tours_by_country.html
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршрутизация (URLs)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Маршрутизация (URLs)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlspy-tour_agency_projecturlspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Основной файл urls.py (tour_agency_project/urls.py)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tours_appurlspy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Маршруты приложения (tours_app/urls.py)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Разделение прав доступа
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Разделение прав доступа">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для неавторизованных пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для авторизованных пользователей
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is_stafftrue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для администраторов (is_staff=True)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Пагинация
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Поиск
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bootstrap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Меню с Bootstrap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no2">Лабораторная работа №2</h1>
+<h2 id="_1">Реализованный функционал</h2>
+<h3 id="1">1. Регистрация новых пользователей</h3>
+<p>Реализована система регистрации пользователей через форму <code>UserRegistrationForm</code>, которая расширяет стандартную форму Django <code>UserCreationForm</code>. Форма включает следующие поля:
+- Имя пользователя (username)
+- Имя (first_name)
+- Фамилия (last_name)
+- Email
+- Пароль и подтверждение пароля</p>
+<p>После успешной регистрации пользователь автоматически авторизуется в системе.</p>
+<p><strong>Реализация:</strong>
+- Представление: <code>register()</code> в <code>views.py</code>
+- Форма: <code>UserRegistrationForm</code> в <code>forms.py</code>
+- Шаблон: <code>templates/tours_app/register.html</code>
+- URL: <code>/register/</code></p>
+<h3 id="2">2. Просмотр и резервирование туров</h3>
+<h4 id="_2">Просмотр списка туров</h4>
+<p>Реализован список туров с использованием класс-представления <code>TourListView</code>, который наследуется от <code>ListView</code>. Список поддерживает:
+- Пагинацию (5 туров на страницу)
+- Поиск по названию, турагенству, описанию и стране
+- Отображение карточек туров с основной информацией</p>
+<h4 id="_3">Детальный просмотр тура</h4>
+<p>На странице детального просмотра отображается:
+- Полная информация о туре (название, турагенство, описание, период проведения, условия оплаты, страна, цена)
+- Список отзывов к туру (последние 10)
+- Информация о резервировании пользователя (если он авторизован)
+- Кнопка для создания резервирования (для авторизованных пользователей)</p>
+<h4 id="_4">Резервирование туров</h4>
+<p>Пользователи могут:
+- Создавать резервирования туров
+- Просматривать список своих резервирований
+- Удалять свои резервирования
+- Видеть статус подтверждения резервирования</p>
+<p><strong>Реализация:</strong>
+- Представления: <code>TourListView</code>, <code>TourDetailView</code>, <code>create_reservation()</code>, <code>my_reservations()</code>, <code>delete_reservation()</code>
+- Форма: <code>ReservationForm</code> в <code>forms.py</code>
+- Шаблоны: <code>tour_list.html</code>, <code>tour_detail.html</code>, <code>reservation_create.html</code>, <code>my_reservations.html</code>, <code>reservation_delete.html</code>
+- URL: <code>/</code>, <code>/tour/&lt;int:pk&gt;/</code>, <code>/tour/&lt;int:tour_id&gt;/reserve/</code>, <code>/my-reservations/</code>, <code>/reservation/&lt;int:reservation_id&gt;/delete/</code></p>
+<p><strong>Особенности:</strong>
+- Резервирование доступно только авторизованным пользователям (декоратор <code>@login_required</code>)
+- Пользователь может удалять только свои резервирования (проверка в <code>delete_reservation()</code>)
+- Статус резервирования (<code>confirmed</code>) устанавливается администратором через Django-admin</p>
+<h3 id="3">3. Написание отзывов к турам</h3>
+<p>Реализована система отзывов с сохранением следующей информации:
+- Дата тура (<code>tour_date</code>)
+- Текст комментария (<code>text</code>)
+- Рейтинг от 1 до 10 (<code>rating</code>) с валидацией через <code>MinValueValidator</code> и <code>MaxValueValidator</code>
+- Информация о комментаторе (связь с моделью <code>User</code>)
+- Дата создания отзыва (автоматически устанавливается при создании)</p>
+<p><strong>Реализация:</strong>
+- Модель: <code>Review</code> в <code>models.py</code>
+- Представление: <code>create_review()</code> в <code>views.py</code>
+- Форма: <code>ReviewForm</code> в <code>forms.py</code>
+- Шаблон: <code>review_create.html</code>
+- URL: <code>/tour/&lt;int:tour_id&gt;/review/</code></p>
+<p><strong>Особенности:</strong>
+- Отзывы отображаются на странице детального просмотра тура
+- Пользователь может оставить только один отзыв к каждому туру (проверка наличия <code>user_review</code> в контексте)
+- Отзывы упорядочены по дате создания (от новых к старым)</p>
+<h3 id="4">4. Подтверждение резервирований администратором</h3>
+<p>Администратор может подтверждать резервирования через Django-admin панель. В админ-панели для модели <code>Reservation</code> реализовано:
+- Отображение списка резервирований с информацией о пользователе, туре, дате резервирования и статусе
+- Возможность редактирования статуса подтверждения прямо из списка (<code>list_editable = ('confirmed',)</code>)
+- Фильтрация по статусу подтверждения и дате резервирования
+- Поиск по имени пользователя и названию тура
+- Иерархия по дате резервирования</p>
+<p><strong>Реализация:</strong>
+- Класс <code>ReservationAdmin</code> в <code>admin.py</code></p>
+<h3 id="5">5. Таблица проданных туров по странам</h3>
+<p>Реализована таблица, отображающая статистику проданных туров по странам на клиентской части (не в админ-панели). Таблица доступна только администраторам и показывает:
+- Страну
+- Количество проданных туров (только подтверждённые резервирования)
+- Общую выручку по стране</p>
+<p><strong>Реализация:</strong>
+- Представление: <code>sold_tours_by_country()</code> в <code>views.py</code> с декоратором <code>@staff_member_required</code>
+- Использование агрегации Django ORM: <code>values()</code>, <code>annotate()</code>, <code>Count()</code>, <code>Sum()</code>
+- Шаблон: <code>sold_tours_by_country.html</code>
+- URL: <code>/admin/sold-tours/</code></p>
+<p><strong>Особенности:</strong>
+- Доступ только для администраторов (проверка через <code>@staff_member_required</code> и <code>user.is_staff</code>)
+- Данные упорядочены по количеству проданных туров (от большего к меньшему)
+- Учитываются только подтверждённые резервирования (<code>confirmed=True</code>)</p>
+<h2 id="_5">Модели данных</h2>
+<h3 id="tour">Tour (Тур)</h3>
+<p>Модель хранит информацию о туре:
+- <code>title</code> - название тура (CharField, max_length=200)
+- <code>agency</code> - турагенство (CharField, max_length=200)
+- <code>description</code> - описание тура (TextField)
+- <code>start_date</code> - дата начала тура (DateField)
+- <code>end_date</code> - дата окончания тура (DateField)
+- <code>payment_terms</code> - условия оплаты (TextField)
+- <code>country</code> - страна (CharField, max_length=100)
+- <code>price</code> - цена (DecimalField, max_digits=10, decimal_places=2)</p>
+<h3 id="reservation">Reservation (Резервирование)</h3>
+<p>Модель для хранения резервирований туров:
+- <code>user</code> - пользователь (ForeignKey к User)
+- <code>tour</code> - тур (ForeignKey к Tour)
+- <code>reservation_date</code> - дата резервирования (DateTimeField, auto_now_add=True)
+- <code>confirmed</code> - статус подтверждения (BooleanField, default=False)</p>
+<h3 id="review">Review (Отзыв)</h3>
+<p>Модель для хранения отзывов к турам:
+- <code>user</code> - пользователь (ForeignKey к User)
+- <code>tour</code> - тур (ForeignKey к Tour, related_name='reviews')
+- <code>tour_date</code> - дата тура (DateField)
+- <code>text</code> - текст отзыва (TextField)
+- <code>rating</code> - рейтинг от 1 до 10 (IntegerField с валидаторами)
+- <code>created_at</code> - дата создания (DateTimeField, auto_now_add=True)</p>
+<h2 id="views">Представления (Views)</h2>
+<h3 id="_6">Функциональные представления</h3>
+<ol>
+<li><strong><code>register(request)</code></strong> - регистрация пользователя</li>
+<li>Обрабатывает GET и POST запросы</li>
+<li>
+<p>Автоматически авторизует пользователя после регистрации</p>
+</li>
+<li>
+<p><strong><code>create_reservation(request, tour_id)</code></strong> - создание резервирования</p>
+</li>
+<li>Декоратор <code>@login_required</code></li>
+<li>
+<p>Связывает резервирование с текущим пользователем и выбранным туром</p>
+</li>
+<li>
+<p><strong><code>my_reservations(request)</code></strong> - список резервирований пользователя</p>
+</li>
+<li>
+<p>Декоратор <code>@login_required</code></p>
+</li>
+<li>
+<p><strong><code>edit_reservation(request, reservation_id)</code></strong> - редактирование резервирования</p>
+</li>
+<li>
+<p>Показывает сообщение о необходимости удалить и создать новое резервирование</p>
+</li>
+<li>
+<p><strong><code>delete_reservation(request, reservation_id)</code></strong> - удаление резервирования</p>
+</li>
+<li>Декоратор <code>@login_required</code></li>
+<li>
+<p>Проверка, что пользователь удаляет только своё резервирование</p>
+</li>
+<li>
+<p><strong><code>create_review(request, tour_id)</code></strong> - создание отзыва</p>
+</li>
+<li>Декоратор <code>@login_required</code></li>
+<li>
+<p>Связывает отзыв с текущим пользователем и выбранным туром</p>
+</li>
+<li>
+<p><strong><code>admin_dashboard(request)</code></strong> - панель администратора</p>
+</li>
+<li>Декоратор <code>@login_required</code> с проверкой <code>is_staff</code></li>
+<li>Отображает статистику: общее количество туров, резервирований, подтверждённых и ожидающих резервирований</li>
+</ol>
+<h3 id="-">Класс-представления</h3>
+<ol>
+<li><strong><code>TourListView(ListView)</code></strong> - список туров</li>
+<li>Наследуется от <code>ListView</code></li>
+<li>Пагинация: 5 туров на страницу (<code>paginate_by = 5</code>)</li>
+<li>Поиск через переопределение <code>get_queryset()</code> с использованием <code>Q</code> объектов</li>
+<li>
+<p>Поиск по полям: <code>title</code>, <code>agency</code>, <code>description</code>, <code>country</code></p>
+</li>
+<li>
+<p><strong><code>TourDetailView(DetailView)</code></strong> - детальный просмотр тура</p>
+</li>
+<li>Наследуется от <code>DetailView</code></li>
+<li>Добавляет в контекст список отзывов, резервирование и отзыв текущего пользователя (если авторизован)</li>
+</ol>
+<h2 id="_7">Формы</h2>
+<h3 id="userregistrationform">UserRegistrationForm</h3>
+<p>Расширяет <code>UserCreationForm</code> для добавления полей:
+- Email (обязательное поле)
+- Имя (first_name)
+- Фамилия (last_name)
+- Стилизация полей через атрибут <code>class='form-control'</code> для Bootstrap</p>
+<h3 id="reservationform">ReservationForm</h3>
+<p>Простая форма на основе модели <code>Reservation</code>:
+- Скрытое поле <code>tour</code> (HiddenInput)
+- Тур передаётся через параметр URL</p>
+<h3 id="reviewform">ReviewForm</h3>
+<p>Форма для создания отзыва на основе модели <code>Review</code>:
+- Поля: <code>tour_date</code> (DateInput), <code>text</code> (Textarea), <code>rating</code> (NumberInput с min=1, max=10)</p>
+<h2 id="-django">Админ-панель Django</h2>
+<h3 id="touradmin">TourAdmin</h3>
+<p>Настройки для модели <code>Tour</code>:
+- Отображение: название, турагенство, страна, даты начала и окончания, цена
+- Фильтры: страна, турагенство, дата начала
+- Поиск: название, турагенство, описание, страна
+- Иерархия по дате начала</p>
+<h3 id="reservationadmin">ReservationAdmin</h3>
+<p>Настройки для модели <code>Reservation</code>:
+- Отображение: пользователь, тур, дата резервирования, статус подтверждения
+- Редактирование статуса из списка (<code>list_editable</code>)
+- Фильтры: статус подтверждения, дата резервирования
+- Поиск: имя пользователя, название тура
+- Иерархия по дате резервирования</p>
+<h3 id="reviewadmin">ReviewAdmin</h3>
+<p>Настройки для модели <code>Review</code>:
+- Отображение: пользователь, тур, рейтинг, дата тура, дата создания
+- Фильтры: рейтинг, дата создания, дата тура
+- Поиск: имя пользователя, название тура, текст отзыва
+- Иерархия по дате создания</p>
+<h2 id="html">Шаблоны (HTML)</h2>
+<h3 id="basehtml">Базовый шаблон (base.html)</h3>
+<p>Содержит общую структуру всех страниц:
+- Навигационное меню с Bootstrap (<code>navbar</code>)
+- Условное отображение пунктов меню в зависимости от статуса пользователя:
+  - Для всех: "Туры"
+  - Для авторизованных: "Мои резервирования"
+  - Для администраторов: "Панель администратора", "Проданные туры"
+  - Для неавторизованных: "Регистрация", "Войти"
+  - Для авторизованных: приветствие и кнопка "Выйти"
+- Блоки <code>{% block title %}</code> и <code>{% block content %}</code> для наследования</p>
+<h3 id="tour_listhtml">tour_list.html</h3>
+<p>Список туров с:
+- Формой поиска с сохранением поискового запроса
+- Отображением туров в виде карточек (Bootstrap cards)
+- Пагинацией с сохранением поискового запроса в URL параметрах
+- Обработкой случая отсутствия туров</p>
+<h3 id="tour_detailhtml">tour_detail.html</h3>
+<p>Детальная страница тура с:
+- Двухколоночной структурой (основная информация и боковая панель)
+- Отображением полной информации о туре
+- Списком отзывов с информацией о пользователе, рейтинге, дате тура
+- Условным отображением кнопки резервирования или информации о существующем резервировании
+- Условным отображением кнопки добавления отзыва (если пользователь ещё не оставил отзыв)</p>
+<h3 id="my_reservationshtml">my_reservations.html</h3>
+<p>Таблица резервирований пользователя с:
+- Информацией о туре, стране, периоде, цене, дате резервирования, статусе
+- Кнопкой удаления с подтверждением через JavaScript
+- Обработкой случая отсутствия резервирований</p>
+<h3 id="admin_dashboardhtml">admin_dashboard.html</h3>
+<p>Панель администратора с:
+- Статистическими карточками (Bootstrap cards) с общей информацией
+- Ссылками на админ-панель Django и страницу проданных туров
+- Проверкой прав доступа (<code>user.is_staff</code>)</p>
+<h3 id="sold_tours_by_countryhtml">sold_tours_by_country.html</h3>
+<p>Таблица проданных туров с:
+- Заголовками: Страна, Количество проданных туров, Общая выручка
+- Обработкой случая отсутствия данных
+- Проверкой прав доступа (<code>user.is_staff</code>)</p>
+<h2 id="urls">Маршрутизация (URLs)</h2>
+<h3 id="urlspy-tour_agency_projecturlspy">Основной файл urls.py (tour_agency_project/urls.py)</h3>
+<ul>
+<li><code>/admin/</code> - админ-панель Django</li>
+<li><code>/</code> - включает маршруты приложения <code>tours_app</code></li>
+</ul>
+<h3 id="tours_appurlspy">Маршруты приложения (tours_app/urls.py)</h3>
+<ul>
+<li><code>/</code> - список туров (<code>tour_list</code>)</li>
+<li><code>/tour/&lt;int:pk&gt;/</code> - детальный просмотр тура (<code>tour_detail</code>)</li>
+<li><code>/register/</code> - регистрация (<code>register</code>)</li>
+<li><code>/tour/&lt;int:tour_id&gt;/reserve/</code> - создание резервирования (<code>create_reservation</code>)</li>
+<li><code>/my-reservations/</code> - список резервирований пользователя (<code>my_reservations</code>)</li>
+<li><code>/reservation/&lt;int:reservation_id&gt;/edit/</code> - редактирование резервирования (<code>edit_reservation</code>)</li>
+<li><code>/reservation/&lt;int:reservation_id&gt;/delete/</code> - удаление резервирования (<code>delete_reservation</code>)</li>
+<li><code>/tour/&lt;int:tour_id&gt;/review/</code> - создание отзыва (<code>create_review</code>)</li>
+<li><code>/admin/dashboard/</code> - панель администратора (<code>admin_dashboard</code>)</li>
+<li><code>/admin/sold-tours/</code> - проданные туры по странам (<code>sold_tours_by_country</code>)</li>
+</ul>
+<h2 id="_8">Разделение прав доступа</h2>
+<h3 id="_9">Для неавторизованных пользователей</h3>
+<ul>
+<li>Просмотр списка туров</li>
+<li>Просмотр детальной информации о туре</li>
+<li>Просмотр отзывов</li>
+<li>Поиск туров</li>
+<li>Регистрация и вход в систему</li>
+</ul>
+<h3 id="_10">Для авторизованных пользователей</h3>
+<ul>
+<li>Все функции неавторизованных пользователей</li>
+<li>Создание резервирований туров</li>
+<li>Просмотр своих резервирований</li>
+<li>Удаление своих резервирований</li>
+<li>Добавление отзывов к турам</li>
+</ul>
+<h3 id="is_stafftrue">Для администраторов (is_staff=True)</h3>
+<ul>
+<li>Все функции обычных пользователей</li>
+<li>Доступ к панели администратора (<code>admin_dashboard</code>)</li>
+<li>Просмотр таблицы проданных туров по странам (<code>sold_tours_by_country</code>)</li>
+<li>Доступ к Django-admin панели для управления всеми объектами</li>
+<li>Подтверждение резервирований через админ-панель</li>
+</ul>
+<p><strong>Реализация проверок:</strong>
+- Декораторы: <code>@login_required</code>, <code>@staff_member_required</code>
+- Проверки в представлениях: <code>if not request.user.is_staff</code>
+- Условные блоки в шаблонах: <code>{% if user.is_authenticated %}</code>, <code>{% if user.is_staff %}</code></p>
+<h2 id="_11">Пагинация</h2>
+<p>Реализована пагинация для списка туров:
+- Использование класс-представления <code>ListView</code> с параметром <code>paginate_by = 5</code>
+- Отображение пагинации в шаблоне через <code>{% if is_paginated %}</code>
+- Кнопки: "Первая", "Предыдущая", "Следующая", "Последняя"
+- Отображение текущей страницы и общего количества страниц
+- Сохранение поискового запроса в URL параметрах при переходе между страницами</p>
+<p><strong>Реализация в шаблоне:</strong>
+- Использование <code>page_obj.has_previous</code>, <code>page_obj.has_next</code>
+- Формирование URL с параметрами <code>?page=X&amp;search=query</code></p>
+<h2 id="_12">Поиск</h2>
+<p>Реализован поиск по турам с пагинацией:
+- Поиск по полям: название (<code>title</code>), турагенство (<code>agency</code>), описание (<code>description</code>), страна (<code>country</code>)
+- Использование <code>Q</code> объектов для сложных запросов с оператором <code>OR</code>
+- Регистронезависимый поиск через <code>icontains</code>
+- Сохранение поискового запроса в контексте и URL параметрах
+- Отображение поискового запроса в поле ввода
+- Сохранение поискового запроса при пагинации</p>
+<p><strong>Реализация:</strong>
+- Переопределение метода <code>get_queryset()</code> в <code>TourListView</code>
+- Форма поиска в шаблоне <code>tour_list.html</code>
+- Передача параметра <code>search</code> через GET запрос</p>
+<h2 id="bootstrap">Меню с Bootstrap</h2>
+<p>Реализовано навигационное меню с использованием Bootstrap 5.3:
+- Адаптивное меню с кнопкой-переключателем для мобильных устройств (<code>navbar-toggler</code>)
+- Условное отображение пунктов меню:
+  - Общие пункты для всех пользователей
+  - Дополнительные пункты для авторизованных пользователей
+  - Специальные пункты для администраторов
+- Отображение информации о текущем пользователе
+- Ссылки на регистрацию/вход для неавторизованных пользователей
+- Ссылка на выход для авторизованных пользователей</p>
+<p><strong>Структура меню:</strong>
+- Логотип/название сайта (ссылка на главную)
+- Основные пункты меню (слева)
+- Пользовательские действия (справа)</p>
+<h2 id="_13">Заключение</h2>
+<p>Модель данных спроектирована с учётом удобства использования: используются связи ForeignKey для нормализации данных, добавлены метаданные для удобной работы в админ-панели, реализованы валидаторы для обеспечения целостности данных.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
