@@ -32,7 +32,7 @@ class Car(models.Model):
     brand = models.CharField(max_length=100, verbose_name='Brand')
     model = models.CharField(max_length=100, verbose_name='Model')
     color = models.CharField(max_length=50, verbose_name='Color')
-    owners = models.ManyToManyField(Owner, through='Ownership', verbose_name='Owners')
+    owners = models.ManyToManyField(Owner, through='Ownership', verbose_name='Owners', related_name='cars')
 
     class Meta:
         verbose_name = 'Car'
@@ -44,8 +44,8 @@ class Car(models.Model):
 
 class Ownership(models.Model):
     """Ownership"""
-    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner')
-    car = models.ForeignKey(Car, on_delete=models.CASCADE, verbose_name='Car')
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner', related_name='ownerships')
+    car = models.ForeignKey(Car, on_delete=models.CASCADE, verbose_name='Car', related_name='ownerships')
     start_date = models.DateField(verbose_name='Start Date')
     end_date = models.DateField(null=True, blank=True, verbose_name='End Date')
 
@@ -59,7 +59,7 @@ class Ownership(models.Model):
 
 class DriverLicense(models.Model):
     """Driver License"""
-    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner')
+    owner = models.ForeignKey(Owner, on_delete=models.CASCADE, verbose_name='Owner', related_name='licenses')
     license_number = models.CharField(max_length=20, unique=True, verbose_name='License Number')
     license_type = models.CharField(max_length=10, verbose_name='License Type')
     issue_date = models.DateField(verbose_name='Issue Date')
