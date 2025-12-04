@@ -1240,245 +1240,306 @@
 <h1 id="no2">Лабораторная работа №2</h1>
 <h2 id="_1">Реализованный функционал</h2>
 <h3 id="1">1. Регистрация новых пользователей</h3>
-<p>Реализована система регистрации пользователей через форму <code>UserRegistrationForm</code>, которая расширяет стандартную форму Django <code>UserCreationForm</code>. Форма включает следующие поля:
-- Имя пользователя (username)
-- Имя (first_name)
-- Фамилия (last_name)
-- Email
-- Пароль и подтверждение пароля</p>
+<p>Реализована система регистрации пользователей через форму <code>UserRegistrationForm</code>, которая расширяет стандартную форму Django <code>UserCreationForm</code>. Форма включает следующие поля:</p>
+<ul>
+<li>Имя пользователя (username)</li>
+<li>Имя (first_name)</li>
+<li>Фамилия (last_name)</li>
+<li>Email</li>
+<li>Пароль и подтверждение пароля</li>
+</ul>
 <p>После успешной регистрации пользователь автоматически авторизуется в системе.</p>
-<p><strong>Реализация:</strong>
-- Представление: <code>register()</code> в <code>views.py</code>
-- Форма: <code>UserRegistrationForm</code> в <code>forms.py</code>
-- Шаблон: <code>templates/tours_app/register.html</code>
-- URL: <code>/register/</code></p>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Представление: <code>register()</code> в <code>views.py</code></li>
+<li>Форма: <code>UserRegistrationForm</code> в <code>forms.py</code></li>
+<li>Шаблон: <code>templates/tours_app/register.html</code></li>
+<li>URL: <code>/register/</code></li>
+</ul>
 <h3 id="2">2. Просмотр и резервирование туров</h3>
 <h4 id="_2">Просмотр списка туров</h4>
-<p>Реализован список туров с использованием класс-представления <code>TourListView</code>, который наследуется от <code>ListView</code>. Список поддерживает:
-- Пагинацию (5 туров на страницу)
-- Поиск по названию, турагенству, описанию и стране
-- Отображение карточек туров с основной информацией</p>
+<p>Реализован список туров с использованием класс-представления <code>TourListView</code>, который наследуется от <code>ListView</code>. Список поддерживает:</p>
+<ul>
+<li>Пагинацию (5 туров на страницу)</li>
+<li>Поиск по названию, турагенству, описанию и стране</li>
+<li>Отображение карточек туров с основной информацией</li>
+</ul>
 <h4 id="_3">Детальный просмотр тура</h4>
-<p>На странице детального просмотра отображается:
-- Полная информация о туре (название, турагенство, описание, период проведения, условия оплаты, страна, цена)
-- Список отзывов к туру (последние 10)
-- Информация о резервировании пользователя (если он авторизован)
-- Кнопка для создания резервирования (для авторизованных пользователей)</p>
+<p>На странице детального просмотра отображается:</p>
+<ul>
+<li>Полная информация о туре (название, турагенство, описание, период проведения, условия оплаты, страна, цена)</li>
+<li>Список отзывов к туру (последние 10)</li>
+<li>Информация о резервировании пользователя (если он авторизован)</li>
+<li>Кнопка для создания резервирования (для авторизованных пользователей)</li>
+</ul>
 <h4 id="_4">Резервирование туров</h4>
-<p>Пользователи могут:
-- Создавать резервирования туров
-- Просматривать список своих резервирований
-- Удалять свои резервирования
-- Видеть статус подтверждения резервирования</p>
-<p><strong>Реализация:</strong>
-- Представления: <code>TourListView</code>, <code>TourDetailView</code>, <code>create_reservation()</code>, <code>my_reservations()</code>, <code>delete_reservation()</code>
-- Форма: <code>ReservationForm</code> в <code>forms.py</code>
-- Шаблоны: <code>tour_list.html</code>, <code>tour_detail.html</code>, <code>reservation_create.html</code>, <code>my_reservations.html</code>, <code>reservation_delete.html</code>
-- URL: <code>/</code>, <code>/tour/&lt;int:pk&gt;/</code>, <code>/tour/&lt;int:tour_id&gt;/reserve/</code>, <code>/my-reservations/</code>, <code>/reservation/&lt;int:reservation_id&gt;/delete/</code></p>
-<p><strong>Особенности:</strong>
-- Резервирование доступно только авторизованным пользователям (декоратор <code>@login_required</code>)
-- Пользователь может удалять только свои резервирования (проверка в <code>delete_reservation()</code>)
-- Статус резервирования (<code>confirmed</code>) устанавливается администратором через Django-admin</p>
+<p>Пользователи могут:</p>
+<ul>
+<li>Создавать резервирования туров</li>
+<li>Просматривать список своих резервирований</li>
+<li>Удалять свои резервирования</li>
+<li>Видеть статус подтверждения резервирования</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Представления: <code>TourListView</code>, <code>TourDetailView</code>, <code>create_reservation()</code>, <code>my_reservations()</code>, <code>delete_reservation()</code></li>
+<li>Форма: <code>ReservationForm</code> в <code>forms.py</code></li>
+<li>Шаблоны: <code>tour_list.html</code>, <code>tour_detail.html</code>, <code>reservation_create.html</code>, <code>my_reservations.html</code>, <code>reservation_delete.html</code></li>
+<li>URL: <code>/</code>, <code>/tour/&lt;int:pk&gt;/</code>, <code>/tour/&lt;int:tour_id&gt;/reserve/</code>, <code>/my-reservations/</code>, <code>/reservation/&lt;int:reservation_id&gt;/delete/</code></li>
+</ul>
+<p><strong>Особенности:</strong></p>
+<ul>
+<li>Резервирование доступно только авторизованным пользователям (декоратор <code>@login_required</code>)</li>
+<li>Пользователь может удалять только свои резервирования (проверка в <code>delete_reservation()</code>)</li>
+<li>Статус резервирования (<code>confirmed</code>) устанавливается администратором через Django-admin</li>
+</ul>
 <h3 id="3">3. Написание отзывов к турам</h3>
-<p>Реализована система отзывов с сохранением следующей информации:
-- Дата тура (<code>tour_date</code>)
-- Текст комментария (<code>text</code>)
-- Рейтинг от 1 до 10 (<code>rating</code>) с валидацией через <code>MinValueValidator</code> и <code>MaxValueValidator</code>
-- Информация о комментаторе (связь с моделью <code>User</code>)
-- Дата создания отзыва (автоматически устанавливается при создании)</p>
-<p><strong>Реализация:</strong>
-- Модель: <code>Review</code> в <code>models.py</code>
-- Представление: <code>create_review()</code> в <code>views.py</code>
-- Форма: <code>ReviewForm</code> в <code>forms.py</code>
-- Шаблон: <code>review_create.html</code>
-- URL: <code>/tour/&lt;int:tour_id&gt;/review/</code></p>
-<p><strong>Особенности:</strong>
-- Отзывы отображаются на странице детального просмотра тура
-- Пользователь может оставить только один отзыв к каждому туру (проверка наличия <code>user_review</code> в контексте)
-- Отзывы упорядочены по дате создания (от новых к старым)</p>
+<p>Реализована система отзывов с сохранением следующей информации:</p>
+<ul>
+<li>Дата тура (<code>tour_date</code>)</li>
+<li>Текст комментария (<code>text</code>)</li>
+<li>Рейтинг от 1 до 10 (<code>rating</code>) с валидацией через <code>MinValueValidator</code> и <code>MaxValueValidator</code></li>
+<li>Информация о комментаторе (связь с моделью <code>User</code>)</li>
+<li>Дата создания отзыва (автоматически устанавливается при создании)</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Модель: <code>Review</code> в <code>models.py</code></li>
+<li>Представление: <code>create_review()</code> в <code>views.py</code></li>
+<li>Форма: <code>ReviewForm</code> в <code>forms.py</code></li>
+<li>Шаблон: <code>review_create.html</code></li>
+<li>URL: <code>/tour/&lt;int:tour_id&gt;/review/</code></li>
+</ul>
+<p><strong>Особенности:</strong></p>
+<ul>
+<li>Отзывы отображаются на странице детального просмотра тура</li>
+<li>Пользователь может оставить только один отзыв к каждому туру (проверка наличия <code>user_review</code> в контексте)</li>
+<li>Отзывы упорядочены по дате создания (от новых к старым)</li>
+</ul>
 <h3 id="4">4. Подтверждение резервирований администратором</h3>
-<p>Администратор может подтверждать резервирования через Django-admin панель. В админ-панели для модели <code>Reservation</code> реализовано:
-- Отображение списка резервирований с информацией о пользователе, туре, дате резервирования и статусе
-- Возможность редактирования статуса подтверждения прямо из списка (<code>list_editable = ('confirmed',)</code>)
-- Фильтрация по статусу подтверждения и дате резервирования
-- Поиск по имени пользователя и названию тура
-- Иерархия по дате резервирования</p>
-<p><strong>Реализация:</strong>
-- Класс <code>ReservationAdmin</code> в <code>admin.py</code></p>
+<p>Администратор может подтверждать резервирования через Django-admin панель. В админ-панели для модели <code>Reservation</code> реализовано:</p>
+<ul>
+<li>Отображение списка резервирований с информацией о пользователе, туре, дате резервирования и статусе</li>
+<li>Возможность редактирования статуса подтверждения прямо из списка (<code>list_editable = ('confirmed',)</code>)</li>
+<li>Фильтрация по статусу подтверждения и дате резервирования</li>
+<li>Поиск по имени пользователя и названию тура</li>
+<li>Иерархия по дате резервирования</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Класс <code>ReservationAdmin</code> в <code>admin.py</code></li>
+</ul>
 <h3 id="5">5. Таблица проданных туров по странам</h3>
-<p>Реализована таблица, отображающая статистику проданных туров по странам на клиентской части (не в админ-панели). Таблица доступна только администраторам и показывает:
-- Страну
-- Количество проданных туров (только подтверждённые резервирования)
-- Общую выручку по стране</p>
-<p><strong>Реализация:</strong>
-- Представление: <code>sold_tours_by_country()</code> в <code>views.py</code> с декоратором <code>@staff_member_required</code>
-- Использование агрегации Django ORM: <code>values()</code>, <code>annotate()</code>, <code>Count()</code>, <code>Sum()</code>
-- Шаблон: <code>sold_tours_by_country.html</code>
-- URL: <code>/admin/sold-tours/</code></p>
-<p><strong>Особенности:</strong>
-- Доступ только для администраторов (проверка через <code>@staff_member_required</code> и <code>user.is_staff</code>)
-- Данные упорядочены по количеству проданных туров (от большего к меньшему)
-- Учитываются только подтверждённые резервирования (<code>confirmed=True</code>)</p>
+<p>Реализована таблица, отображающая статистику проданных туров по странам на клиентской части (не в админ-панели). Таблица доступна только администраторам и показывает:</p>
+<ul>
+<li>Страну</li>
+<li>Количество проданных туров (только подтверждённые резервирования)</li>
+<li>Общую выручку по стране</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Представление: <code>sold_tours_by_country()</code> в <code>views.py</code> с декоратором <code>@staff_member_required</code></li>
+<li>Использование агрегации Django ORM: <code>values()</code>, <code>annotate()</code>, <code>Count()</code>, <code>Sum()</code></li>
+<li>Шаблон: <code>sold_tours_by_country.html</code></li>
+<li>URL: <code>/admin/sold-tours/</code></li>
+</ul>
+<p><strong>Особенности:</strong></p>
+<ul>
+<li>Доступ только для администраторов (проверка через <code>@staff_member_required</code> и <code>user.is_staff</code>)</li>
+<li>Данные упорядочены по количеству проданных туров (от большего к меньшему)</li>
+<li>Учитываются только подтверждённые резервирования (<code>confirmed=True</code>)</li>
+</ul>
 <h2 id="_5">Модели данных</h2>
 <h3 id="tour">Tour (Тур)</h3>
-<p>Модель хранит информацию о туре:
-- <code>title</code> - название тура (CharField, max_length=200)
-- <code>agency</code> - турагенство (CharField, max_length=200)
-- <code>description</code> - описание тура (TextField)
-- <code>start_date</code> - дата начала тура (DateField)
-- <code>end_date</code> - дата окончания тура (DateField)
-- <code>payment_terms</code> - условия оплаты (TextField)
-- <code>country</code> - страна (CharField, max_length=100)
-- <code>price</code> - цена (DecimalField, max_digits=10, decimal_places=2)</p>
+<p>Модель хранит информацию о туре:</p>
+<ul>
+<li><code>title</code> - название тура (CharField, max_length=200)</li>
+<li><code>agency</code> - турагенство (CharField, max_length=200)</li>
+<li><code>description</code> - описание тура (TextField)</li>
+<li><code>start_date</code> - дата начала тура (DateField)</li>
+<li><code>end_date</code> - дата окончания тура (DateField)</li>
+<li><code>payment_terms</code> - условия оплаты (TextField)</li>
+<li><code>country</code> - страна (CharField, max_length=100)</li>
+<li><code>price</code> - цена (DecimalField, max_digits=10, decimal_places=2)</li>
+</ul>
 <h3 id="reservation">Reservation (Резервирование)</h3>
-<p>Модель для хранения резервирований туров:
-- <code>user</code> - пользователь (ForeignKey к User)
-- <code>tour</code> - тур (ForeignKey к Tour)
-- <code>reservation_date</code> - дата резервирования (DateTimeField, auto_now_add=True)
-- <code>confirmed</code> - статус подтверждения (BooleanField, default=False)</p>
+<p>Модель для хранения резервирований туров:</p>
+<ul>
+<li><code>user</code> - пользователь (ForeignKey к User)</li>
+<li><code>tour</code> - тур (ForeignKey к Tour)</li>
+<li><code>reservation_date</code> - дата резервирования (DateTimeField, auto_now_add=True)</li>
+<li><code>confirmed</code> - статус подтверждения (BooleanField, default=False)</li>
+</ul>
 <h3 id="review">Review (Отзыв)</h3>
-<p>Модель для хранения отзывов к турам:
-- <code>user</code> - пользователь (ForeignKey к User)
-- <code>tour</code> - тур (ForeignKey к Tour, related_name='reviews')
-- <code>tour_date</code> - дата тура (DateField)
-- <code>text</code> - текст отзыва (TextField)
-- <code>rating</code> - рейтинг от 1 до 10 (IntegerField с валидаторами)
-- <code>created_at</code> - дата создания (DateTimeField, auto_now_add=True)</p>
+<p>Модель для хранения отзывов к турам:</p>
+<ul>
+<li><code>user</code> - пользователь (ForeignKey к User)</li>
+<li><code>tour</code> - тур (ForeignKey к Tour, related_name='reviews')</li>
+<li><code>tour_date</code> - дата тура (DateField)</li>
+<li><code>text</code> - текст отзыва (TextField)</li>
+<li><code>rating</code> - рейтинг от 1 до 10 (IntegerField с валидаторами)</li>
+<li><code>created_at</code> - дата создания (DateTimeField, auto_now_add=True)</li>
+</ul>
 <h2 id="views">Представления (Views)</h2>
 <h3 id="_6">Функциональные представления</h3>
 <ol>
-<li><strong><code>register(request)</code></strong> - регистрация пользователя</li>
-<li>Обрабатывает GET и POST запросы</li>
-<li>
-<p>Автоматически авторизует пользователя после регистрации</p>
+<li><strong><code>register(request)</code></strong> - регистрация пользователя
+    <ul>
+    <li>Обрабатывает GET и POST запросы</li>
+    <li>Автоматически авторизует пользователя после регистрации</li>
+    </ul>
 </li>
-<li>
-<p><strong><code>create_reservation(request, tour_id)</code></strong> - создание резервирования</p>
+<li><strong><code>create_reservation(request, tour_id)</code></strong> - создание резервирования
+    <ul>
+    <li>Декоратор <code>@login_required</code></li>
+    <li>Связывает резервирование с текущим пользователем и выбранным туром</li>
+    </ul>
 </li>
-<li>Декоратор <code>@login_required</code></li>
-<li>
-<p>Связывает резервирование с текущим пользователем и выбранным туром</p>
+<li><strong><code>my_reservations(request)</code></strong> - список резервирований пользователя
+    <ul>
+    <li>Декоратор <code>@login_required</code></li>
+    </ul>
 </li>
-<li>
-<p><strong><code>my_reservations(request)</code></strong> - список резервирований пользователя</p>
+<li><strong><code>edit_reservation(request, reservation_id)</code></strong> - редактирование резервирования
+    <ul>
+    <li>Показывает сообщение о необходимости удалить и создать новое резервирование</li>
+    </ul>
 </li>
-<li>
-<p>Декоратор <code>@login_required</code></p>
+<li><strong><code>delete_reservation(request, reservation_id)</code></strong> - удаление резервирования
+    <ul>
+    <li>Декоратор <code>@login_required</code></li>
+    <li>Проверка, что пользователь удаляет только своё резервирование</li>
+    </ul>
 </li>
-<li>
-<p><strong><code>edit_reservation(request, reservation_id)</code></strong> - редактирование резервирования</p>
+<li><strong><code>create_review(request, tour_id)</code></strong> - создание отзыва
+    <ul>
+    <li>Декоратор <code>@login_required</code></li>
+    <li>Связывает отзыв с текущим пользователем и выбранным туром</li>
+    </ul>
 </li>
-<li>
-<p>Показывает сообщение о необходимости удалить и создать новое резервирование</p>
+<li><strong><code>admin_dashboard(request)</code></strong> - панель администратора
+    <ul>
+    <li>Декоратор <code>@login_required</code> с проверкой <code>is_staff</code></li>
+    <li>Отображает статистику: общее количество туров, резервирований, подтверждённых и ожидающих резервирований</li>
+    </ul>
 </li>
-<li>
-<p><strong><code>delete_reservation(request, reservation_id)</code></strong> - удаление резервирования</p>
-</li>
-<li>Декоратор <code>@login_required</code></li>
-<li>
-<p>Проверка, что пользователь удаляет только своё резервирование</p>
-</li>
-<li>
-<p><strong><code>create_review(request, tour_id)</code></strong> - создание отзыва</p>
-</li>
-<li>Декоратор <code>@login_required</code></li>
-<li>
-<p>Связывает отзыв с текущим пользователем и выбранным туром</p>
-</li>
-<li>
-<p><strong><code>admin_dashboard(request)</code></strong> - панель администратора</p>
-</li>
-<li>Декоратор <code>@login_required</code> с проверкой <code>is_staff</code></li>
-<li>Отображает статистику: общее количество туров, резервирований, подтверждённых и ожидающих резервирований</li>
 </ol>
+
 <h3 id="-">Класс-представления</h3>
 <ol>
-<li><strong><code>TourListView(ListView)</code></strong> - список туров</li>
-<li>Наследуется от <code>ListView</code></li>
-<li>Пагинация: 5 туров на страницу (<code>paginate_by = 5</code>)</li>
-<li>Поиск через переопределение <code>get_queryset()</code> с использованием <code>Q</code> объектов</li>
-<li>
-<p>Поиск по полям: <code>title</code>, <code>agency</code>, <code>description</code>, <code>country</code></p>
+<li><strong><code>TourListView(ListView)</code></strong> - список туров
+    <ul>
+    <li>Наследуется от <code>ListView</code></li>
+    <li>Пагинация: 5 туров на страницу (<code>paginate_by = 5</code>)</li>
+    <li>Поиск через переопределение <code>get_queryset()</code> с использованием <code>Q</code> объектов</li>
+    <li>Поиск по полям: <code>title</code>, <code>agency</code>, <code>description</code>, <code>country</code></li>
+    </ul>
 </li>
-<li>
-<p><strong><code>TourDetailView(DetailView)</code></strong> - детальный просмотр тура</p>
+<li><strong><code>TourDetailView(DetailView)</code></strong> - детальный просмотр тура
+    <ul>
+    <li>Наследуется от <code>DetailView</code></li>
+    <li>Добавляет в контекст список отзывов, резервирование и отзыв текущего пользователя (если авторизован)</li>
+    </ul>
 </li>
-<li>Наследуется от <code>DetailView</code></li>
-<li>Добавляет в контекст список отзывов, резервирование и отзыв текущего пользователя (если авторизован)</li>
 </ol>
+
 <h2 id="_7">Формы</h2>
 <h3 id="userregistrationform">UserRegistrationForm</h3>
-<p>Расширяет <code>UserCreationForm</code> для добавления полей:
-- Email (обязательное поле)
-- Имя (first_name)
-- Фамилия (last_name)
-- Стилизация полей через атрибут <code>class='form-control'</code> для Bootstrap</p>
+<p>Расширяет <code>UserCreationForm</code> для добавления полей:</p>
+<ul>
+<li>Email (обязательное поле)</li>
+<li>Имя (first_name)</li>
+<li>Фамилия (last_name)</li>
+<li>Стилизация полей через атрибут <code>class='form-control'</code> для Bootstrap</li>
+</ul>
 <h3 id="reservationform">ReservationForm</h3>
-<p>Простая форма на основе модели <code>Reservation</code>:
-- Скрытое поле <code>tour</code> (HiddenInput)
-- Тур передаётся через параметр URL</p>
+<p>Простая форма на основе модели <code>Reservation</code>:</p>
+<ul>
+<li>Скрытое поле <code>tour</code> (HiddenInput)</li>
+<li>Тур передаётся через параметр URL</li>
+</ul>
 <h3 id="reviewform">ReviewForm</h3>
-<p>Форма для создания отзыва на основе модели <code>Review</code>:
-- Поля: <code>tour_date</code> (DateInput), <code>text</code> (Textarea), <code>rating</code> (NumberInput с min=1, max=10)</p>
+<p>Форма для создания отзыва на основе модели <code>Review</code>:</p>
+<ul>
+<li>Поля: <code>tour_date</code> (DateInput), <code>text</code> (Textarea), <code>rating</code> (NumberInput с min=1, max=10)</li>
+</ul>
 <h2 id="-django">Админ-панель Django</h2>
 <h3 id="touradmin">TourAdmin</h3>
-<p>Настройки для модели <code>Tour</code>:
-- Отображение: название, турагенство, страна, даты начала и окончания, цена
-- Фильтры: страна, турагенство, дата начала
-- Поиск: название, турагенство, описание, страна
-- Иерархия по дате начала</p>
+<p>Настройки для модели <code>Tour</code>:</p>
+<ul>
+<li>Отображение: название, турагенство, страна, даты начала и окончания, цена</li>
+<li>Фильтры: страна, турагенство, дата начала</li>
+<li>Поиск: название, турагенство, описание, страна</li>
+<li>Иерархия по дате начала</li>
+</ul>
 <h3 id="reservationadmin">ReservationAdmin</h3>
-<p>Настройки для модели <code>Reservation</code>:
-- Отображение: пользователь, тур, дата резервирования, статус подтверждения
-- Редактирование статуса из списка (<code>list_editable</code>)
-- Фильтры: статус подтверждения, дата резервирования
-- Поиск: имя пользователя, название тура
-- Иерархия по дате резервирования</p>
+<p>Настройки для модели <code>Reservation</code>:</p>
+<ul>
+<li>Отображение: пользователь, тур, дата резервирования, статус подтверждения</li>
+<li>Редактирование статуса из списка (<code>list_editable</code>)</li>
+<li>Фильтры: статус подтверждения, дата резервирования</li>
+<li>Поиск: имя пользователя, название тура</li>
+<li>Иерархия по дате резервирования</li>
+</ul>
 <h3 id="reviewadmin">ReviewAdmin</h3>
-<p>Настройки для модели <code>Review</code>:
-- Отображение: пользователь, тур, рейтинг, дата тура, дата создания
-- Фильтры: рейтинг, дата создания, дата тура
-- Поиск: имя пользователя, название тура, текст отзыва
-- Иерархия по дате создания</p>
+<p>Настройки для модели <code>Review</code>:</p>
+<ul>
+<li>Отображение: пользователь, тур, рейтинг, дата тура, дата создания</li>
+<li>Фильтры: рейтинг, дата создания, дата тура</li>
+<li>Поиск: имя пользователя, название тура, текст отзыва</li>
+<li>Иерархия по дате создания</li>
+</ul>
 <h2 id="html">Шаблоны (HTML)</h2>
 <h3 id="basehtml">Базовый шаблон (base.html)</h3>
-<p>Содержит общую структуру всех страниц:
-- Навигационное меню с Bootstrap (<code>navbar</code>)
-- Условное отображение пунктов меню в зависимости от статуса пользователя:
-  - Для всех: "Туры"
-  - Для авторизованных: "Мои резервирования"
-  - Для администраторов: "Панель администратора", "Проданные туры"
-  - Для неавторизованных: "Регистрация", "Войти"
-  - Для авторизованных: приветствие и кнопка "Выйти"
-- Блоки <code>{% block title %}</code> и <code>{% block content %}</code> для наследования</p>
+<p>Содержит общую структуру всех страниц:</p>
+<ul>
+<li>Навигационное меню с Bootstrap (<code>navbar</code>)</li>
+<li>Условное отображение пунктов меню в зависимости от статуса пользователя:</li>
+<li>Для всех: "Туры"</li>
+<li>Для авторизованных: "Мои резервирования"</li>
+<li>Для администраторов: "Панель администратора", "Проданные туры"</li>
+<li>Для неавторизованных: "Регистрация", "Войти"</li>
+<li>Для авторизованных: приветствие и кнопка "Выйти"</li>
+<li>Блоки <code>{% block title %}</code> и <code>{% block content %}</code> для наследования</li>
+</ul>
 <h3 id="tour_listhtml">tour_list.html</h3>
-<p>Список туров с:
-- Формой поиска с сохранением поискового запроса
-- Отображением туров в виде карточек (Bootstrap cards)
-- Пагинацией с сохранением поискового запроса в URL параметрах
-- Обработкой случая отсутствия туров</p>
+<p>Список туров с:</p>
+<ul>
+<li>Формой поиска с сохранением поискового запроса</li>
+<li>Отображением туров в виде карточек (Bootstrap cards)</li>
+<li>Пагинацией с сохранением поискового запроса в URL параметрах</li>
+<li>Обработкой случая отсутствия туров</li>
+</ul>
 <h3 id="tour_detailhtml">tour_detail.html</h3>
-<p>Детальная страница тура с:
-- Двухколоночной структурой (основная информация и боковая панель)
-- Отображением полной информации о туре
-- Списком отзывов с информацией о пользователе, рейтинге, дате тура
-- Условным отображением кнопки резервирования или информации о существующем резервировании
-- Условным отображением кнопки добавления отзыва (если пользователь ещё не оставил отзыв)</p>
+<p>Детальная страница тура с:</p>
+<ul>
+<li>Двухколоночной структурой (основная информация и боковая панель)</li>
+<li>Отображением полной информации о туре</li>
+<li>Списком отзывов с информацией о пользователе, рейтинге, дате тура</li>
+<li>Условным отображением кнопки резервирования или информации о существующем резервировании</li>
+<li>Условным отображением кнопки добавления отзыва (если пользователь ещё не оставил отзыв)</li>
+</ul>
 <h3 id="my_reservationshtml">my_reservations.html</h3>
-<p>Таблица резервирований пользователя с:
-- Информацией о туре, стране, периоде, цене, дате резервирования, статусе
-- Кнопкой удаления с подтверждением через JavaScript
-- Обработкой случая отсутствия резервирований</p>
+<p>Таблица резервирований пользователя с:</p>
+<ul>
+<li>Информацией о туре, стране, периоде, цене, дате резервирования, статусе</li>
+<li>Кнопкой удаления с подтверждением через JavaScript</li>
+<li>Обработкой случая отсутствия резервирований</li>
+</ul>
 <h3 id="admin_dashboardhtml">admin_dashboard.html</h3>
-<p>Панель администратора с:
-- Статистическими карточками (Bootstrap cards) с общей информацией
-- Ссылками на админ-панель Django и страницу проданных туров
-- Проверкой прав доступа (<code>user.is_staff</code>)</p>
+<p>Панель администратора с:</p>
+<ul>
+<li>Статистическими карточками (Bootstrap cards) с общей информацией</li>
+<li>Ссылками на админ-панель Django и страницу проданных туров</li>
+<li>Проверкой прав доступа (<code>user.is_staff</code>)</li>
+</ul>
 <h3 id="sold_tours_by_countryhtml">sold_tours_by_country.html</h3>
-<p>Таблица проданных туров с:
-- Заголовками: Страна, Количество проданных туров, Общая выручка
-- Обработкой случая отсутствия данных
-- Проверкой прав доступа (<code>user.is_staff</code>)</p>
+<p>Таблица проданных туров с:</p>
+<ul>
+<li>Заголовками: Страна, Количество проданных туров, Общая выручка</li>
+<li>Обработкой случая отсутствия данных</li>
+<li>Проверкой прав доступа (<code>user.is_staff</code>)</li>
+</ul>
 <h2 id="urls">Маршрутизация (URLs)</h2>
 <h3 id="urlspy-tour_agency_projecturlspy">Основной файл urls.py (tour_agency_project/urls.py)</h3>
 <ul>
@@ -1523,46 +1584,60 @@
 <li>Доступ к Django-admin панели для управления всеми объектами</li>
 <li>Подтверждение резервирований через админ-панель</li>
 </ul>
-<p><strong>Реализация проверок:</strong>
-- Декораторы: <code>@login_required</code>, <code>@staff_member_required</code>
-- Проверки в представлениях: <code>if not request.user.is_staff</code>
-- Условные блоки в шаблонах: <code>{% if user.is_authenticated %}</code>, <code>{% if user.is_staff %}</code></p>
+<p><strong>Реализация проверок:</strong></p>
+<ul>
+<li>Декораторы: <code>@login_required</code>, <code>@staff_member_required</code></li>
+<li>Проверки в представлениях: <code>if not request.user.is_staff</code></li>
+<li>Условные блоки в шаблонах: <code>{% if user.is_authenticated %}</code>, <code>{% if user.is_staff %}</code></li>
+</ul>
 <h2 id="_11">Пагинация</h2>
-<p>Реализована пагинация для списка туров:
-- Использование класс-представления <code>ListView</code> с параметром <code>paginate_by = 5</code>
-- Отображение пагинации в шаблоне через <code>{% if is_paginated %}</code>
-- Кнопки: "Первая", "Предыдущая", "Следующая", "Последняя"
-- Отображение текущей страницы и общего количества страниц
-- Сохранение поискового запроса в URL параметрах при переходе между страницами</p>
-<p><strong>Реализация в шаблоне:</strong>
-- Использование <code>page_obj.has_previous</code>, <code>page_obj.has_next</code>
-- Формирование URL с параметрами <code>?page=X&amp;search=query</code></p>
+<p>Реализована пагинация для списка туров:</p>
+<ul>
+<li>Использование класс-представления <code>ListView</code> с параметром <code>paginate_by = 5</code></li>
+<li>Отображение пагинации в шаблоне через <code>{% if is_paginated %}</code></li>
+<li>Кнопки: "Первая", "Предыдущая", "Следующая", "Последняя"</li>
+<li>Отображение текущей страницы и общего количества страниц</li>
+<li>Сохранение поискового запроса в URL параметрах при переходе между страницами</li>
+</ul>
+<p><strong>Реализация в шаблоне:</strong></p>
+<ul>
+<li>Использование <code>page_obj.has_previous</code>, <code>page_obj.has_next</code></li>
+<li>Формирование URL с параметрами <code>?page=X&amp;search=query</code></li>
+</ul>
 <h2 id="_12">Поиск</h2>
-<p>Реализован поиск по турам с пагинацией:
-- Поиск по полям: название (<code>title</code>), турагенство (<code>agency</code>), описание (<code>description</code>), страна (<code>country</code>)
-- Использование <code>Q</code> объектов для сложных запросов с оператором <code>OR</code>
-- Регистронезависимый поиск через <code>icontains</code>
-- Сохранение поискового запроса в контексте и URL параметрах
-- Отображение поискового запроса в поле ввода
-- Сохранение поискового запроса при пагинации</p>
-<p><strong>Реализация:</strong>
-- Переопределение метода <code>get_queryset()</code> в <code>TourListView</code>
-- Форма поиска в шаблоне <code>tour_list.html</code>
-- Передача параметра <code>search</code> через GET запрос</p>
+<p>Реализован поиск по турам с пагинацией:</p>
+<ul>
+<li>Поиск по полям: название (<code>title</code>), турагенство (<code>agency</code>), описание (<code>description</code>), страна (<code>country</code>)</li>
+<li>Использование <code>Q</code> объектов для сложных запросов с оператором <code>OR</code></li>
+<li>Регистронезависимый поиск через <code>icontains</code></li>
+<li>Сохранение поискового запроса в контексте и URL параметрах</li>
+<li>Отображение поискового запроса в поле ввода</li>
+<li>Сохранение поискового запроса при пагинации</li>
+</ul>
+<p><strong>Реализация:</strong></p>
+<ul>
+<li>Переопределение метода <code>get_queryset()</code> в <code>TourListView</code></li>
+<li>Форма поиска в шаблоне <code>tour_list.html</code></li>
+<li>Передача параметра <code>search</code> через GET запрос</li>
+</ul>
 <h2 id="bootstrap">Меню с Bootstrap</h2>
-<p>Реализовано навигационное меню с использованием Bootstrap 5.3:
-- Адаптивное меню с кнопкой-переключателем для мобильных устройств (<code>navbar-toggler</code>)
-- Условное отображение пунктов меню:
-  - Общие пункты для всех пользователей
-  - Дополнительные пункты для авторизованных пользователей
-  - Специальные пункты для администраторов
-- Отображение информации о текущем пользователе
-- Ссылки на регистрацию/вход для неавторизованных пользователей
-- Ссылка на выход для авторизованных пользователей</p>
-<p><strong>Структура меню:</strong>
-- Логотип/название сайта (ссылка на главную)
-- Основные пункты меню (слева)
-- Пользовательские действия (справа)</p>
+<p>Реализовано навигационное меню с использованием Bootstrap 5.3:</p>
+<ul>
+<li>Адаптивное меню с кнопкой-переключателем для мобильных устройств (<code>navbar-toggler</code>)</li>
+<li>Условное отображение пунктов меню:</li>
+<li>Общие пункты для всех пользователей</li>
+<li>Дополнительные пункты для авторизованных пользователей</li>
+<li>Специальные пункты для администраторов</li>
+<li>Отображение информации о текущем пользователе</li>
+<li>Ссылки на регистрацию/вход для неавторизованных пользователей</li>
+<li>Ссылка на выход для авторизованных пользователей</li>
+</ul>
+<p><strong>Структура меню:</strong></p>
+<ul>
+<li>Логотип/название сайта (ссылка на главную)</li>
+<li>Основные пункты меню (слева)</li>
+<li>Пользовательские действия (справа)</li>
+</ul>
 <h2 id="_13">Заключение</h2>
 <p>Модель данных спроектирована с учётом удобства использования: используются связи ForeignKey для нормализации данных, добавлены метаданные для удобной работы в админ-панели, реализованы валидаторы для обеспечения целостности данных.</p>
 
