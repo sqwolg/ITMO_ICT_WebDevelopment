@@ -900,205 +900,280 @@
 <li><strong>Смена пароля</strong> — изменение пароля пользователя</li>
 <li><strong>Выход</strong> — завершение сессии</li>
 </ul>
+
 <h4 id="_3">Интерфейсы для работы с данными:</h4>
 <ul>
 <li><strong>Книги</strong> — просмотр списка книг с информацией об авторах</li>
 <li><strong>Читатели</strong> — просмотр списка читателей с информацией о залах</li>
 <li><strong>Читальные залы</strong> — просмотр списка залов с статистикой</li>
 </ul>
+
 <h3 id="3">3. Реализация интерфейсов авторизации, регистрации и изменения учётных данных</h3>
 <h4 id="31-registervue">3.1. Компонент регистрации (<code>Register.vue</code>)</h4>
-<p>Реализован интерфейс регистрации нового пользователя:
-- Поля формы: имя пользователя, пароль, подтверждение пароля
-- Валидация совпадения паролей на клиенте
-- Отправка данных на <code>/api/auth/users/</code> через Djoser
-- Обработка ошибок регистрации
-- Перенаправление на страницу входа после успешной регистрации</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>POST /api/auth/users/</code> — создание пользователя</p>
+<p>Реализован интерфейс регистрации нового пользователя:</p>
+<ul>
+<li>Поля формы: имя пользователя, пароль, подтверждение пароля</li>
+<li>Валидация совпадения паролей на клиенте</li>
+<li>Отправка данных на <code>/api/auth/users/</code> через Djoser</li>
+<li>Обработка ошибок регистрации</li>
+<li>Перенаправление на страницу входа после успешной регистрации</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>POST /api/auth/users/</code> — создание пользователя</li>
+</ul>
+
 <h4 id="32-loginvue">3.2. Компонент авторизации (<code>Login.vue</code>)</h4>
-<p>Реализован интерфейс входа в систему:
-- Поля формы: имя пользователя, пароль
-- Отправка данных на <code>/api/auth/token/login/</code> для получения токена
-- Сохранение токена в localStorage
-- Получение информации о пользователе через <code>/api/auth/users/me/</code>
-- Сохранение данных пользователя в localStorage
-- Обработка ошибок авторизации
-- Перенаправление на главную страницу после успешного входа</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>POST /api/auth/token/login/</code> — получение токена авторизации
-- <code>GET /api/auth/users/me/</code> — информация о текущем пользователе</p>
+<p>Реализован интерфейс входа в систему:</p>
+<ul>
+<li>Поля формы: имя пользователя, пароль</li>
+<li>Отправка данных на <code>/api/auth/token/login/</code> для получения токена</li>
+<li>Сохранение токена в localStorage</li>
+<li>Получение информации о пользователе через <code>/api/auth/users/me/</code></li>
+<li>Сохранение данных пользователя в localStorage</li>
+<li>Обработка ошибок авторизации</li>
+<li>Перенаправление на главную страницу после успешного входа</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>POST /api/auth/token/login/</code> — получение токена авторизации</li>
+<li><code>GET /api/auth/users/me/</code> — информация о текущем пользователе</li>
+</ul>
+
 <h4 id="33-profilevue">3.3. Компонент профиля (<code>Profile.vue</code>)</h4>
 <p>Реализован интерфейс управления профилем пользователя с двумя вкладками:</p>
-<p><strong>Вкладка "Профиль":</strong>
-- Отображение текущих данных пользователя (username, email, first_name, last_name)
-- Форма для обновления данных профиля
-- Отправка данных на <code>/api/auth/users/me/</code> методом PATCH
-- Отображение сообщений об успехе/ошибке</p>
-<p><strong>Вкладка "Смена пароля":</strong>
-- Поля формы: текущий пароль, новый пароль, подтверждение нового пароля
-- Валидация совпадения паролей на клиенте
-- Отправка данных на <code>/api/auth/users/set_password/</code>
-- Отображение сообщений об успехе/ошибке
-- Очистка формы после успешной смены пароля</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>GET /api/auth/users/me/</code> — получение данных пользователя (через store)
-- <code>PATCH /api/auth/users/me/</code> — обновление данных профиля
-- <code>POST /api/auth/users/set_password/</code> — смена пароля</p>
+<p><strong>Вкладка "Профиль":</strong></p>
+<ul>
+<li>Отображение текущих данных пользователя (username, email, first_name, last_name)</li>
+<li>Форма для обновления данных профиля</li>
+<li>Отправка данных на <code>/api/auth/users/me/</code> методом PATCH</li>
+<li>Отображение сообщений об успехе/ошибке</li>
+</ul>
+
+<p><strong>Вкладка "Смена пароля":</strong></p>
+<ul>
+<li>Поля формы: текущий пароль, новый пароль, подтверждение нового пароля</li>
+<li>Валидация совпадения паролей на клиенте</li>
+<li>Отправка данных на <code>/api/auth/users/set_password/</code></li>
+<li>Отображение сообщений об успехе/ошибке</li>
+<li>Очистка формы после успешной смены пароля</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>GET /api/auth/users/me/</code> — получение данных пользователя (через store)</li>
+<li><code>PATCH /api/auth/users/me/</code> — обновление данных профиля</li>
+<li><code>POST /api/auth/users/set_password/</code> — смена пароля</li>
+</ul>
+
 <h3 id="4">4. Реализация клиентских интерфейсов для работы с данными</h3>
 <h4 id="41-booksvue">4.1. Компонент списка книг (<code>Books.vue</code>)</h4>
-<p>Реализован интерфейс для просмотра списка книг:
-- Таблица с использованием компонента <code>v-data-table</code> из Vuetify
-- Отображение колонок: ID, название, авторы, издательство, год издания, раздел, шифр
-- Обработка вложенных объектов авторов (<code>authors_detail</code>) с отображением списка авторов через запятую
-- Поддержка пагинации (если сервер возвращает пагинированные данные)
-- Индикатор загрузки данных
-- Обработка ошибок загрузки</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>GET /api/books/</code> — получение списка книг</p>
+<p>Реализован интерфейс для просмотра списка книг:</p>
+<ul>
+<li>Таблица с использованием компонента <code>v-data-table</code> из Vuetify</li>
+<li>Отображение колонок: ID, название, авторы, издательство, год издания, раздел, шифр</li>
+<li>Обработка вложенных объектов авторов (<code>authors_detail</code>) с отображением списка авторов через запятую</li>
+<li>Поддержка пагинации (если сервер возвращает пагинированные данные)</li>
+<li>Индикатор загрузки данных</li>
+<li>Обработка ошибок загрузки</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>GET /api/books/</code> — получение списка книг</li>
+</ul>
+
 <h4 id="42-readersvue">4.2. Компонент списка читателей (<code>Readers.vue</code>)</h4>
-<p>Реализован интерфейс для просмотра списка читателей:
-- Таблица с использованием компонента <code>v-data-table</code> из Vuetify
-- Отображение колонок: ID, номер билета, ФИО, паспорт, дата рождения, образование, читальный зал
-- Обработка вложенных объектов зала (<code>reading_hall_detail</code>) с отображением названия зала
-- Преобразование кодов образования в читаемые названия (primary → Начальное, secondary → Среднее, и т.д.)
-- Поддержка пагинации
-- Индикатор загрузки данных
-- Обработка ошибок загрузки</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>GET /api/readers/</code> — получение списка читателей</p>
+<p>Реализован интерфейс для просмотра списка читателей:</p>
+<ul>
+<li>Таблица с использованием компонента <code>v-data-table</code> из Vuetify</li>
+<li>Отображение колонок: ID, номер билета, ФИО, паспорт, дата рождения, образование, читальный зал</li>
+<li>Обработка вложенных объектов зала (<code>reading_hall_detail</code>) с отображением названия зала</li>
+<li>Преобразование кодов образования в читаемые названия (primary → Начальное, secondary → Среднее, и т.д.)</li>
+<li>Поддержка пагинации</li>
+<li>Индикатор загрузки данных</li>
+<li>Обработка ошибок загрузки</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>GET /api/readers/</code> — получение списка читателей</li>
+</ul>
+
 <h4 id="43-readinghallsvue">4.3. Компонент списка читальных залов (<code>ReadingHalls.vue</code>)</h4>
-<p>Реализован интерфейс для просмотра списка читальных залов:
-- Таблица с использованием компонента <code>v-data-table</code> из Vuetify
-- Отображение колонок: ID, номер, название, вместимость, количество читателей, количество книг
-- Отображение вычисляемых полей из сериализатора (<code>readers_count</code>, <code>books_count</code>)
-- Поддержка пагинации
-- Индикатор загрузки данных
-- Обработка ошибок загрузки</p>
-<p><strong>Используемые API endpoints:</strong>
-- <code>GET /api/reading-halls/</code> — получение списка читальных залов</p>
+<p>Реализован интерфейс для просмотра списка читальных залов:</p>
+<ul>
+<li>Таблица с использованием компонента <code>v-data-table</code> из Vuetify</li>
+<li>Отображение колонок: ID, номер, название, вместимость, количество читателей, количество книг</li>
+<li>Отображение вычисляемых полей из сериализатора (<code>readers_count</code>, <code>books_count</code>)</li>
+<li>Поддержка пагинации</li>
+<li>Индикатор загрузки данных</li>
+<li>Обработка ошибок загрузки</li>
+</ul>
+
+<p><strong>Используемые API endpoints:</strong></p>
+<ul>
+<li><code>GET /api/reading-halls/</code> — получение списка читальных залов</li>
+</ul>
+
 <h3 id="5-vuetify">5. Подключение Vuetify</h3>
 <p>Подключена библиотека Vuetify для создания современного Material Design интерфейса.</p>
 <p><strong>Установка зависимостей:</strong></p>
 <pre><code class="language-bash">npm install vuetify@^3.4.7 @mdi/font
 </code></pre>
-<p><strong>Настройка в <code>src/plugins/vuetify.js</code>:</strong>
-- Импорт всех компонентов и директив Vuetify
-- Импорт стилей Vuetify
-- Импорт иконок Material Design Icons
-- Настройка темы (светлая тема по умолчанию)</p>
-<p><strong>Подключение в <code>src/main.js</code>:</strong>
-- Создание экземпляра Vuetify
-- Регистрация плагина в приложении Vue</p>
-<p><strong>Использование компонентов Vuetify:</strong>
-- <code>v-app</code> — корневой компонент приложения
-- <code>v-app-bar</code> — панель навигации
-- <code>v-container</code>, <code>v-row</code>, <code>v-col</code> — система сетки
-- <code>v-card</code>, <code>v-card-title</code>, <code>v-card-text</code> — карточки
-- <code>v-data-table</code> — таблицы данных
-- <code>v-form</code> — формы
-- <code>v-text-field</code> — текстовые поля
-- <code>v-btn</code> — кнопки
-- <code>v-alert</code> — уведомления
-- <code>v-tabs</code>, <code>v-tab</code>, <code>v-window</code>, <code>v-window-item</code> — вкладки
-- <code>v-divider</code> — разделители</p>
+<p><strong>Настройка в <code>src/plugins/vuetify.js</code>:</strong></p>
+<ul>
+<li>Импорт всех компонентов и директив Vuetify</li>
+<li>Импорт стилей Vuetify</li>
+<li>Импорт иконок Material Design Icons</li>
+<li>Настройка темы (светлая тема по умолчанию)</li>
+</ul>
+
+<p><strong>Подключение в <code>src/main.js</code>:</strong></p>
+<ul>
+<li>Создание экземпляра Vuetify</li>
+<li>Регистрация плагина в приложении Vue</li>
+</ul>
+
+<p><strong>Использование компонентов Vuetify:</strong></p>
+<ul>
+<li><code>v-app</code> — корневой компонент приложения</li>
+<li><code>v-app-bar</code> — панель навигации</li>
+<li><code>v-container</code>, <code>v-row</code>, <code>v-col</code> — система сетки</li>
+<li><code>v-card</code>, <code>v-card-title</code>, <code>v-card-text</code> — карточки</li>
+<li><code>v-data-table</code> — таблицы данных</li>
+<li><code>v-form</code> — формы</li>
+<li><code>v-text-field</code> — текстовые поля</li>
+<li><code>v-btn</code> — кнопки</li>
+<li><code>v-alert</code> — уведомления</li>
+<li><code>v-tabs</code>, <code>v-tab</code>, <code>v-window</code>, <code>v-window-item</code> — вкладки</li>
+<li><code>v-divider</code> — разделители</li>
+</ul>
+
 <h2 id="_4">Архитектура клиентского приложения</h2>
 <h3 id="api-srcservicesapijs">Сервис API (<code>src/services/api.js</code>)</h3>
 <p>Реализован централизованный сервис для работы с API:</p>
 <ol>
-<li><strong>Создание экземпляра Axios:</strong></li>
+<li><strong>Создание экземпляра Axios:</strong>
+<ul>
 <li>Базовый URL: <code>http://localhost:8000/api</code></li>
-<li>
-<p>Заголовок <code>Content-Type: application/json</code> по умолчанию</p>
+<li>Заголовок <code>Content-Type: application/json</code> по умолчанию</li>
+</ul>
 </li>
-<li>
-<p><strong>Request interceptor:</strong></p>
-</li>
+<li><strong>Request interceptor:</strong>
+<ul>
 <li>Автоматическое добавление токена авторизации к каждому запросу</li>
 <li>Формат заголовка: <code>Authorization: Token &lt;token&gt;</code></li>
-<li>
-<p>Получение токена из Pinia store</p>
+<li>Получение токена из Pinia store</li>
+</ul>
 </li>
-<li>
-<p><strong>Response interceptor:</strong></p>
-</li>
+<li><strong>Response interceptor:</strong>
+<ul>
 <li>Обработка ошибок авторизации (401)</li>
 <li>Автоматический выход пользователя при истечении токена</li>
 <li>Перенаправление на страницу входа при ошибке 401</li>
+</ul>
+</li>
 </ol>
+
 <h3 id="store-srcstoresauthjs">Store аутентификации (<code>src/stores/auth.js</code>)</h3>
 <p>Реализован Pinia store для управления состоянием аутентификации:</p>
-<p><strong>Состояние (state):</strong>
-- <code>token</code> — токен авторизации (хранится в localStorage)
-- <code>user</code> — данные текущего пользователя (хранится в localStorage)</p>
-<p><strong>Вычисляемые свойства (computed):</strong>
-- <code>isAuthenticated</code> — проверка наличия токена</p>
-<p><strong>Методы (actions):</strong>
-- <code>login(username, password)</code> — вход в систему
-  - Получение токена через <code>/api/auth/token/login/</code>
-  - Сохранение токена в localStorage
-  - Получение данных пользователя через <code>/api/auth/users/me/</code>
-  - Сохранение данных пользователя в localStorage
-  - Возврат результата с обработкой ошибок</p>
+<p><strong>Состояние (state):</strong></p>
 <ul>
-<li><code>register(username, password, passwordConfirm)</code> — регистрация</li>
+<li><code>token</code> — токен авторизации (хранится в localStorage)</li>
+<li><code>user</code> — данные текущего пользователя (хранится в localStorage)</li>
+</ul>
+
+<p><strong>Вычисляемые свойства (computed):</strong></p>
+<ul>
+<li><code>isAuthenticated</code> — проверка наличия токена</li>
+</ul>
+
+<p><strong>Методы (actions):</strong></p>
+<ul>
+<li><code>login(username, password)</code> — вход в систему
+<ul>
+<li>Получение токена через <code>/api/auth/token/login/</code></li>
+<li>Сохранение токена в localStorage</li>
+<li>Получение данных пользователя через <code>/api/auth/users/me/</code></li>
+<li>Сохранение данных пользователя в localStorage</li>
+<li>Возврат результата с обработкой ошибок</li>
+</ul>
+</li>
+<li><code>register(username, password, passwordConfirm)</code> — регистрация
+<ul>
 <li>Создание пользователя через <code>/api/auth/users/</code></li>
-<li>
-<p>Возврат результата с обработкой ошибок</p>
+<li>Возврат результата с обработкой ошибок</li>
+</ul>
 </li>
-<li>
-<p><code>updateProfile(data)</code> — обновление профиля</p>
-</li>
+<li><code>updateProfile(data)</code> — обновление профиля
+<ul>
 <li>Отправка PATCH запроса на <code>/api/auth/users/me/</code></li>
 <li>Обновление данных пользователя в store и localStorage</li>
-<li>
-<p>Возврат результата с обработкой ошибок</p>
+<li>Возврат результата с обработкой ошибок</li>
+</ul>
 </li>
-<li>
-<p><code>changePassword(currentPassword, newPassword)</code> — смена пароля</p>
-</li>
+<li><code>changePassword(currentPassword, newPassword)</code> — смена пароля
+<ul>
 <li>Отправка POST запроса на <code>/api/auth/users/set_password/</code></li>
-<li>
-<p>Возврат результата с обработкой ошибок</p>
+<li>Возврат результата с обработкой ошибок</li>
+</ul>
 </li>
-<li>
-<p><code>logout()</code> — выход из системы</p>
-</li>
+<li><code>logout()</code> — выход из системы
+<ul>
 <li>Очистка токена и данных пользователя</li>
 <li>Удаление данных из localStorage</li>
 </ul>
+</li>
+</ul>
+
 <h3 id="srcrouterindexjs">Маршрутизация (<code>src/router/index.js</code>)</h3>
 <p>Настроена маршрутизация с защитой маршрутов:</p>
-<p><strong>Маршруты:</strong>
-- <code>/</code> — редирект на <code>/books</code>
-- <code>/login</code> — страница входа (не требует авторизации)
-- <code>/register</code> — страница регистрации (не требует авторизации)
-- <code>/profile</code> — страница профиля (требует авторизации)
-- <code>/books</code> — страница списка книг (требует авторизации)
-- <code>/readers</code> — страница списка читателей (требует авторизации)
-- <code>/reading-halls</code> — страница списка залов (требует авторизации)</p>
-<p><strong>Навигационный guard (<code>beforeEach</code>):</strong>
-- Проверка требования авторизации для защищенных маршрутов
-- Перенаправление на <code>/login</code> для неавторизованных пользователей
-- Перенаправление на <code>/</code> для авторизованных пользователей, пытающихся зайти на <code>/login</code> или <code>/register</code></p>
+<p><strong>Маршруты:</strong></p>
+<ul>
+<li><code>/</code> — редирект на <code>/books</code></li>
+<li><code>/login</code> — страница входа (не требует авторизации)</li>
+<li><code>/register</code> — страница регистрации (не требует авторизации)</li>
+<li><code>/profile</code> — страница профиля (требует авторизации)</li>
+<li><code>/books</code> — страница списка книг (требует авторизации)</li>
+<li><code>/readers</code> — страница списка читателей (требует авторизации)</li>
+<li><code>/reading-halls</code> — страница списка залов (требует авторизации)</li>
+</ul>
+
+<p><strong>Навигационный guard (<code>beforeEach</code>):</strong></p>
+<ul>
+<li>Проверка требования авторизации для защищенных маршрутов</li>
+<li>Перенаправление на <code>/login</code> для неавторизованных пользователей</li>
+<li>Перенаправление на <code>/</code> для авторизованных пользователей, пытающихся зайти на <code>/login</code> или <code>/register</code></li>
+</ul>
+
 <h3 id="appvue">Главный компонент (<code>App.vue</code>)</h3>
 <p>Реализован корневой компонент приложения:</p>
 <ul>
 <li><strong>Условное отображение панели навигации</strong> — только для авторизованных пользователей</li>
-<li><strong>Навигационное меню</strong> с кнопками:</li>
+<li><strong>Навигационное меню</strong> с кнопками:
+<ul>
 <li>Книги</li>
 <li>Читатели</li>
 <li>Читальные залы</li>
 <li>Профиль</li>
 <li>Выход</li>
+</ul>
+</li>
 <li><strong>Обработка выхода</strong> — вызов метода <code>logout</code> из store и перенаправление на страницу входа</li>
 <li><strong>Router view</strong> — отображение компонентов страниц</li>
 </ul>
+
 <h2 id="_5">Взаимодействие с серверной частью</h2>
 <h3 id="_6">Формат запросов</h3>
-<p>Все запросы к API отправляются с заголовками:
-- <code>Content-Type: application/json</code>
-- <code>Authorization: Token &lt;token&gt;</code> (для авторизованных запросов)</p>
+<p>Все запросы к API отправляются с заголовками:</p>
+<ul>
+<li><code>Content-Type: application/json</code></li>
+<li><code>Authorization: Token &lt;token&gt;</code> (для авторизованных запросов)</li>
+</ul>
+
 <h2 id="_7">Заключение</h2>
 <p>В ходе выполнения лабораторной работы была реализована клиентская часть приложения для системы управления библиотекой:</p>
 <ol>
