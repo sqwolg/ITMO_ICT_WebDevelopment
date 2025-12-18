@@ -1,0 +1,1881 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Документация по лабораторным работам по веб-разработке">
+      
+      
+      
+      
+        <link rel="prev" href="../lab2/">
+      
+      
+        <link rel="next" href="../lab4/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
+    
+    
+      
+        <title>Лабораторная работа №3 - Документация лабораторных работ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Документация лабораторных работ" class="md-header__button md-logo" aria-label="Документация лабораторных работ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Документация лабораторных работ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа №3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Переключить на тёмную тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на тёмную тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Переключить на светлую тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Документация лабораторных работ" class="md-nav__button md-logo" aria-label="Документация лабораторных работ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Документация лабораторных работ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Реализованный функционал
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованный функционал">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Модели базы данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-api-django-rest-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. API на базе Django REST Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Вложенные объекты для связей
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Вложенные объекты для связей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для связи один-ко-многим:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для связи многие-ко-многим:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Аналитические запросы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Операции библиотекаря
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Отчеты
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Аутентификация и авторизация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Swagger документация
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Author (Автор)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghall" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHall (Читальный зал)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reader (Читатель)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Book (Книга)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopy (Экземпляр книги в зале)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignment (Закрепление книги за читателем)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сериализаторы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сериализаторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghallserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readerserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopySerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewsets-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      ViewSets и API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ViewSets и API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghallviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readerviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopyViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyticsviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnalyticsViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librarianoperationsviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      LibrarianOperationsViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reportviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReportViewSet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djoser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Аутентификация (Djoser)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Аутентификация (Djoser)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Регистрация пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение токена
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход (удаление токена)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Информация о текущем пользователе
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Использование related_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа с ManyToMany связями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа с ManyToMany связями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#book-author-manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь Book ↔ Author (ManyToMany)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book-readinghall-manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь Book ↔ ReadingHall (ManyToMany через промежуточную модель)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ-панель Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Админ-панель Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authoradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghalladmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readeradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentAdmin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Реализованный функционал
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованный функционал">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Модели базы данных
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-api-django-rest-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. API на базе Django REST Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Вложенные объекты для связей
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Вложенные объекты для связей">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для связи один-ко-многим:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Для связи многие-ко-многим:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Аналитические запросы
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Операции библиотекаря
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Отчеты
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Аутентификация и авторизация
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Swagger документация
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Модели данных
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Модели данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Author (Автор)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghall" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHall (Читальный зал)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reader" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reader (Читатель)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Book (Книга)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopy" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopy (Экземпляр книги в зале)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignment (Закрепление книги за читателем)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Сериализаторы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сериализаторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghallserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readerserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopySerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewsets-api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      ViewSets и API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ViewSets и API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authorviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghallviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readerviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopyViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analyticsviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      AnalyticsViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#librarianoperationsviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      LibrarianOperationsViewSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reportviewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReportViewSet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#djoser" class="md-nav__link">
+    <span class="md-ellipsis">
+      Аутентификация (Djoser)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Аутентификация (Djoser)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Регистрация пользователя
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение токена
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход (удаление токена)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Информация о текущем пользователе
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      Использование related_name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Работа с ManyToMany связями
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Работа с ManyToMany связями">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#book-author-manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь Book ↔ Author (ManyToMany)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#book-readinghall-manytomany" class="md-nav__link">
+    <span class="md-ellipsis">
+      Связь Book ↔ ReadingHall (ManyToMany через промежуточную модель)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ-панель Django
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Админ-панель Django">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authoradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      AuthorAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readinghalladmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReadingHallAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readeradmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      ReaderAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcopyadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookCopyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookassignmentadmin" class="md-nav__link">
+    <span class="md-ellipsis">
+      BookAssignmentAdmin
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заключение
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="no3">Лабораторная работа №3</h1>
+<h2 id="_1">Реализованный функционал</h2>
+<h3 id="1">1. Модели базы данных</h3>
+<p>Реализованы модели для системы управления библиотекой с использованием Django ORM:</p>
+<ul>
+<li><strong>Author</strong> — авторы книг</li>
+<li><strong>ReadingHall</strong> — читальные залы библиотеки</li>
+<li><strong>Reader</strong> — читатели библиотеки</li>
+<li><strong>Book</strong> — книги</li>
+<li><strong>BookCopy</strong> — экземпляры книг в залах (связь многие-ко-многим через промежуточную модель)</li>
+<li><strong>BookAssignment</strong> — закрепления книг за читателями</li>
+</ul>
+<p>Все модели содержат необходимые поля согласно техническому заданию и используют связи ForeignKey и ManyToManyField с правильно настроенными <code>related_name</code> для удобных запросов.</p>
+<h3 id="2-api-django-rest-framework">2. API на базе Django REST Framework</h3>
+<p>Реализованы ViewSets для всех основных сущностей с поддержкой CRUD-операций:</p>
+<ul>
+<li><strong>AuthorViewSet</strong> — управление авторами</li>
+<li><strong>ReadingHallViewSet</strong> — управление читальными залами</li>
+<li><strong>ReaderViewSet</strong> — управление читателями</li>
+<li><strong>BookViewSet</strong> — управление книгами</li>
+<li><strong>BookCopyViewSet</strong> — управление экземплярами книг в залах</li>
+<li><strong>BookAssignmentViewSet</strong> — управление закреплениями книг</li>
+</ul>
+<p>Все ViewSets используют стандартные методы ModelViewSet (list, create, retrieve, update, destroy) и поддерживают пагинацию (20 элементов на страницу).</p>
+<h3 id="3">3. Вложенные объекты для связей</h3>
+<p>Реализованы дополнительные endpoints для получения вложенных объектов:</p>
+<h4 id="-">Для связи один-ко-многим:</h4>
+<ul>
+<li><strong>GET <code>/api/reading-halls/&lt;id&gt;/readers/</code></strong> — получить список читателей зала</li>
+<li><strong>GET <code>/api/readers/&lt;id&gt;/books/</code></strong> — получить список книг, закрепленных за читателем</li>
+<li><strong>GET <code>/api/books/&lt;id&gt;/copies/</code></strong> — получить список экземпляров книги в залах</li>
+</ul>
+<h4 id="-_1">Для связи многие-ко-многим:</h4>
+<ul>
+<li>В сериализаторах реализованы вложенные объекты:</li>
+<li><code>BookSerializer</code> включает <code>authors_detail</code> (список авторов) и <code>copies_detail</code> (список экземпляров в залах)</li>
+<li><code>ReaderSerializer</code> включает <code>reading_hall_detail</code> (информация о зале)</li>
+<li><code>BookAssignmentSerializer</code> включает <code>book_detail</code> и <code>reader_detail</code></li>
+</ul>
+<h3 id="4">4. Аналитические запросы</h3>
+<p>Реализован <code>AnalyticsViewSet</code> с аналитическими запросами согласно ТЗ:</p>
+<ol>
+<li><strong><code>GET /api/analytics/reader_books/?reader_id=&lt;id&gt;</code></strong> — какие книги закреплены за заданным читателем?</li>
+<li>
+<p>Возвращает список активных закреплений книг за указанным читателем</p>
+</li>
+<li>
+<p><strong><code>GET /api/analytics/old_assignments/</code></strong> — кто из читателей взял книгу более месяца тому назад?</p>
+</li>
+<li>
+<p>Находит всех читателей, у которых есть не возвращенные книги, закрепленные более 30 дней назад</p>
+</li>
+<li>
+<p><strong><code>GET /api/analytics/readers_with_rare_books/</code></strong> — за кем из читателей закреплены книги, количество экземпляров которых в библиотеке не превышает 2?</p>
+</li>
+<li>Использует агрегацию Django ORM (<code>Sum</code>) для подсчета общего количества экземпляров каждой книги</li>
+<li>
+<p>Находит читателей с закрепленными редкими книгами</p>
+</li>
+<li>
+<p><strong><code>GET /api/analytics/young_readers_count/</code></strong> — сколько в библиотеке читателей младше 20 лет?</p>
+</li>
+<li>
+<p>Возвращает количество активных читателей, родившихся менее 20 лет назад</p>
+</li>
+<li>
+<p><strong><code>GET /api/analytics/education_statistics/</code></strong> — сколько читателей в процентном отношении имеют начальное образование, среднее, высшее, ученую степень?</p>
+</li>
+<li>Возвращает процентное соотношение читателей по уровням образования</li>
+<li>Учитывает как поле <code>education</code>, так и <code>has_degree</code></li>
+</ol>
+<h3 id="5">5. Операции библиотекаря</h3>
+<p>Реализован <code>LibrarianOperationsViewSet</code> с операциями для библиотекаря:</p>
+<ol>
+<li><strong><code>POST /api/librarian-operations/register_reader/</code></strong> — записать в библиотеку нового читателя</li>
+<li>Принимает данные читателя через сериализатор</li>
+<li>
+<p>Автоматически устанавливает <code>is_active=True</code></p>
+</li>
+<li>
+<p><strong><code>POST /api/librarian-operations/exclude_old_readers/</code></strong> — исключить из списка читателей людей, записавшихся в библиотеку более года назад и не прошедших перерегистрацию</p>
+</li>
+<li>Находит всех читателей, зарегистрированных более 365 дней назад</li>
+<li>Устанавливает <code>is_active=False</code> для таких читателей</li>
+<li>
+<p>Возвращает количество исключенных читателей и их ID</p>
+</li>
+<li>
+<p><strong><code>POST /api/librarian-operations/write_off_book/</code></strong> — списать старую или потерянную книгу</p>
+</li>
+<li>Принимает <code>book_id</code>, <code>reading_hall_id</code> и <code>quantity</code></li>
+<li>Уменьшает количество экземпляров книги в указанном зале</li>
+<li>
+<p>Проверяет наличие достаточного количества экземпляров</p>
+</li>
+<li>
+<p><strong><code>POST /api/librarian-operations/accept_book/</code></strong> — принять книгу в фонд библиотеки</p>
+</li>
+<li>Принимает <code>book_id</code>, <code>reading_hall_id</code> и <code>quantity</code></li>
+<li>Создает новую запись <code>BookCopy</code> или увеличивает количество существующих экземпляров</li>
+</ol>
+<h3 id="6">6. Отчеты</h3>
+<p>Реализован <code>ReportViewSet</code> для генерации отчетов:</p>
+<p><strong><code>GET /api/reports/monthly_report/?year=&lt;year&gt;&amp;month=&lt;month&gt;</code></strong> — отчет о работе библиотеки в течение месяца</p>
+<p>Отчет включает:
+- <strong>Ежедневную статистику</strong> для каждого дня месяца:
+  - Количество книг в библиотеке
+  - Количество активных читателей
+  - Количество читателей по каждому залу
+- <strong>Общую статистику за месяц</strong>:
+  - Общее количество книг
+  - Общее количество активных читателей
+  - Количество новых читателей, записавшихся в отчетный месяц
+  - Количество новых читателей по каждому залу</p>
+<h3 id="7">7. Аутентификация и авторизация</h3>
+<p>Реализована система аутентификации через Djoser с использованием токенов:</p>
+<ul>
+<li><strong>Регистрация пользователей</strong>: <code>POST /api/auth/users/</code></li>
+<li><strong>Получение токена</strong>: <code>POST /api/auth/token/login/</code></li>
+<li><strong>Выход (удаление токена)</strong>: <code>POST /api/auth/token/logout/</code></li>
+<li><strong>Информация о текущем пользователе</strong>: <code>GET /api/auth/users/me/</code></li>
+</ul>
+<p>Все API endpoints требуют аутентификации (настроено через <code>DEFAULT_PERMISSION_CLASSES</code> в settings.py). Для доступа к API необходимо передавать токен в заголовке:</p>
+<pre><code>Authorization: Token &lt;your_token&gt;
+</code></pre>
+<h3 id="8-swagger">8. Swagger документация</h3>
+<p>Интегрирована документация API через <code>drf-yasg</code>:
+- <strong>Swagger UI</strong>: <code>/swagger/</code> — интерактивная документация с возможностью тестирования API
+- <strong>ReDoc</strong>: <code>/redoc/</code> — альтернативный формат документации</p>
+<p>Все endpoints документированы с помощью декораторов <code>@swagger_auto_schema</code>, включая описания параметров, типов ответов и примеры использования.</p>
+<h2 id="_2">Модели данных</h2>
+<h3 id="author">Author (Автор)</h3>
+<p>Модель хранит информацию об авторах книг:
+- <code>name</code> — имя автора (CharField, max_length=200)
+- Связь ManyToMany с Book через поле <code>authors</code> в модели Book</p>
+<h3 id="readinghall">ReadingHall (Читальный зал)</h3>
+<p>Модель хранит информацию о читальных залах:
+- <code>number</code> — номер зала (IntegerField, unique=True)
+- <code>name</code> — название зала (CharField, max_length=200)
+- <code>capacity</code> — вместимость зала (IntegerField, с валидатором MinValueValidator(1))
+- Связь один-ко-многим с Reader через <code>related_name='readers'</code>
+- Связь один-ко-многим с BookCopy через <code>related_name='book_copies'</code></p>
+<h3 id="reader">Reader (Читатель)</h3>
+<p>Модель хранит информацию о читателях библиотеки:
+- <code>ticket_number</code> — номер читательского билета (CharField, max_length=50, unique=True)
+- <code>full_name</code> — ФИО читателя (CharField, max_length=200)
+- <code>passport_number</code> — номер паспорта (CharField, max_length=50)
+- <code>birth_date</code> — дата рождения (DateField)
+- <code>address</code> — адрес (TextField)
+- <code>phone</code> — номер телефона (CharField, max_length=20)
+- <code>education</code> — образование (CharField, choices: 'primary', 'secondary', 'higher', 'degree')
+- <code>has_degree</code> — наличие ученой степени (BooleanField, default=False)
+- <code>reading_hall</code> — читальный зал (ForeignKey к ReadingHall, null=True, related_name='readers')
+- <code>registration_date</code> — дата регистрации (DateField, auto_now_add=True)
+- <code>is_active</code> — активен ли читатель (BooleanField, default=True)
+- Связь один-ко-многим с BookAssignment через <code>related_name='book_assignments'</code></p>
+<h3 id="book">Book (Книга)</h3>
+<p>Модель хранит информацию о книгах:
+- <code>title</code> — название книги (CharField, max_length=300)
+- <code>authors</code> — авторы (ManyToManyField к Author, related_name='books')
+- <code>publisher</code> — издательство (CharField, max_length=200)
+- <code>publication_year</code> — год издания (IntegerField)
+- <code>section</code> — раздел (CharField, max_length=100)
+- <code>code</code> — шифр книги (CharField, max_length=100, unique=True)
+- <code>assignment_date</code> — дата закрепления за читателем (DateField, null=True, blank=True)
+- Связь один-ко-многим с BookCopy через <code>related_name='copies'</code>
+- Связь один-ко-многим с BookAssignment через <code>related_name='assignments'</code></p>
+<h3 id="bookcopy">BookCopy (Экземпляр книги в зале)</h3>
+<p>Промежуточная модель для связи многие-ко-многим между Book и ReadingHall:
+- <code>book</code> — книга (ForeignKey к Book, related_name='copies')
+- <code>reading_hall</code> — читальный зал (ForeignKey к ReadingHall, related_name='book_copies')
+- <code>quantity</code> — количество экземпляров (IntegerField, с валидатором MinValueValidator(0), default=0)
+- Уникальное ограничение на пару (book, reading_hall) через <code>unique_together</code></p>
+<h3 id="bookassignment">BookAssignment (Закрепление книги за читателем)</h3>
+<p>Модель хранит информацию о закреплении книг за читателями:
+- <code>book</code> — книга (ForeignKey к Book, related_name='assignments')
+- <code>reader</code> — читатель (ForeignKey к Reader, related_name='book_assignments')
+- <code>assignment_date</code> — дата закрепления (DateField, auto_now_add=True)
+- <code>is_returned</code> — возвращена ли книга (BooleanField, default=False)</p>
+<h2 id="_3">Сериализаторы</h2>
+<h3 id="authorserializer">AuthorSerializer</h3>
+<p>Сериализатор для модели Author:
+- Поля: <code>id</code>, <code>name</code>, <code>books_count</code> (вычисляемое поле через <code>SerializerMethodField</code>)</p>
+<h3 id="readinghallserializer">ReadingHallSerializer</h3>
+<p>Сериализатор для модели ReadingHall:
+- Поля: <code>id</code>, <code>number</code>, <code>name</code>, <code>capacity</code>, <code>readers_count</code>, <code>books_count</code> (вычисляемые поля)</p>
+<h3 id="readerserializer">ReaderSerializer</h3>
+<p>Сериализатор для модели Reader:
+- Поля: все поля модели, <code>reading_hall_detail</code> (вложенный объект зала), <code>assigned_books_count</code> (количество закрепленных книг)
+- Использует <code>ReadingHallSerializer</code> для вложенного объекта зала</p>
+<h3 id="bookserializer">BookSerializer</h3>
+<p>Сериализатор для модели Book:
+- Поля: все поля модели, <code>authors_detail</code> (список авторов), <code>copies_detail</code> (список экземпляров в залах), <code>assignments_count</code> (количество активных закреплений)
+- Использует <code>AuthorSerializer</code> для списка авторов
+- Использует <code>BookCopyNestedSerializer</code> для списка экземпляров</p>
+<h3 id="bookcopyserializer">BookCopySerializer</h3>
+<p>Сериализатор для модели BookCopy:
+- Поля: <code>id</code>, <code>book</code>, <code>book_detail</code> (вложенный объект книги), <code>reading_hall</code>, <code>reading_hall_detail</code> (вложенный объект зала), <code>quantity</code>
+- Использует <code>BookSerializer</code> и <code>ReadingHallSerializer</code> для вложенных объектов</p>
+<h3 id="bookassignmentserializer">BookAssignmentSerializer</h3>
+<p>Сериализатор для модели BookAssignment:
+- Поля: <code>id</code>, <code>book</code>, <code>book_detail</code> (вложенный объект книги), <code>reader</code>, <code>reader_detail</code> (вложенный объект читателя), <code>assignment_date</code>, <code>is_returned</code>
+- Использует <code>BookSerializer</code> и <code>ReaderSerializer</code> для вложенных объектов</p>
+<h2 id="viewsets-api-endpoints">ViewSets и API Endpoints</h2>
+<h3 id="authorviewset">AuthorViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/authors/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li>Стандартный ModelViewSet без дополнительных действий</li>
+</ul>
+<h3 id="readinghallviewset">ReadingHallViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/reading-halls/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li><strong>Дополнительный endpoint</strong>: <code>GET /api/reading-halls/&lt;id&gt;/readers/</code> — получить список читателей зала</li>
+</ul>
+<h3 id="readerviewset">ReaderViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/readers/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li><strong>Дополнительный endpoint</strong>: <code>GET /api/readers/&lt;id&gt;/books/</code> — получить список книг, закрепленных за читателем</li>
+</ul>
+<h3 id="bookviewset">BookViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/books/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li><strong>Дополнительный endpoint</strong>: <code>GET /api/books/&lt;id&gt;/copies/</code> — получить список экземпляров книги в залах</li>
+</ul>
+<h3 id="bookcopyviewset">BookCopyViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/book-copies/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li>Стандартный ModelViewSet без дополнительных действий</li>
+</ul>
+<h3 id="bookassignmentviewset">BookAssignmentViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/book-assignments/</code></li>
+<li><strong>Методы</strong>: GET (list, retrieve), POST, PUT, PATCH, DELETE</li>
+<li>Стандартный ModelViewSet без дополнительных действий</li>
+</ul>
+<h3 id="analyticsviewset">AnalyticsViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/analytics/</code></li>
+<li><strong>Endpoints</strong>:</li>
+<li><code>GET /api/analytics/reader_books/?reader_id=&lt;id&gt;</code> — книги закрепленные за читателем</li>
+<li><code>GET /api/analytics/old_assignments/</code> — читатели с книгами старше месяца</li>
+<li><code>GET /api/analytics/readers_with_rare_books/</code> — читатели с редкими книгами</li>
+<li><code>GET /api/analytics/young_readers_count/</code> — количество читателей младше 20 лет</li>
+<li><code>GET /api/analytics/education_statistics/</code> — статистика по образованию</li>
+</ul>
+<h3 id="librarianoperationsviewset">LibrarianOperationsViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/librarian-operations/</code></li>
+<li><strong>Endpoints</strong>:</li>
+<li><code>POST /api/librarian-operations/register_reader/</code> — записать нового читателя</li>
+<li><code>POST /api/librarian-operations/exclude_old_readers/</code> — исключить старых читателей</li>
+<li><code>POST /api/librarian-operations/write_off_book/</code> — списать книгу</li>
+<li><code>POST /api/librarian-operations/accept_book/</code> — принять книгу в фонд</li>
+</ul>
+<h3 id="reportviewset">ReportViewSet</h3>
+<ul>
+<li><strong>Базовый URL</strong>: <code>/api/reports/</code></li>
+<li><strong>Endpoints</strong>:</li>
+<li><code>GET /api/reports/monthly_report/?year=&lt;year&gt;&amp;month=&lt;month&gt;</code> — отчет за месяц</li>
+</ul>
+<h2 id="djoser">Аутентификация (Djoser)</h2>
+<h3 id="_4">Регистрация пользователя</h3>
+<p><strong>POST</strong> <code>/api/auth/users/</code></p>
+<p>Тело запроса:</p>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;username&quot;,
+  &quot;password&quot;: &quot;password&quot;,
+  &quot;email&quot;: &quot;email@example.com&quot;
+}
+</code></pre>
+<h3 id="_5">Получение токена</h3>
+<p><strong>POST</strong> <code>/api/auth/token/login/</code></p>
+<p>Тело запроса:</p>
+<pre><code class="language-json">{
+  &quot;username&quot;: &quot;username&quot;,
+  &quot;password&quot;: &quot;password&quot;
+}
+</code></pre>
+<p>Ответ:</p>
+<pre><code class="language-json">{
+  &quot;auth_token&quot;: &quot;your_token_here&quot;
+}
+</code></pre>
+<h3 id="_6">Выход (удаление токена)</h3>
+<p><strong>POST</strong> <code>/api/auth/token/logout/</code></p>
+<p>Требует заголовок: <code>Authorization: Token &lt;your_token&gt;</code></p>
+<h3 id="_7">Информация о текущем пользователе</h3>
+<p><strong>GET</strong> <code>/api/auth/users/me/</code></p>
+<p>Требует заголовок: <code>Authorization: Token &lt;your_token&gt;</code></p>
+<h2 id="related_name">Использование related_name</h2>
+<p>В проекте правильно настроены <code>related_name</code> для всех связей:</p>
+<ol>
+<li><strong>ReadingHall.readers</strong> — обратный доступ к читателям зала через <code>hall.readers.all()</code></li>
+<li><strong>ReadingHall.book_copies</strong> — обратный доступ к экземплярам книг через <code>hall.book_copies.all()</code></li>
+<li><strong>Reader.book_assignments</strong> — обратный доступ к закреплениям через <code>reader.book_assignments.all()</code></li>
+<li><strong>Book.copies</strong> — обратный доступ к экземплярам через <code>book.copies.all()</code></li>
+<li><strong>Book.assignments</strong> — обратный доступ к закреплениям через <code>book.assignments.all()</code></li>
+<li><strong>Author.books</strong> — обратный доступ к книгам через <code>author.books.all()</code></li>
+</ol>
+<p>Примеры использования в коде:
+- <code>hall.readers.filter(is_active=True)</code> — активные читатели зала
+- <code>reader.book_assignments.filter(is_returned=False)</code> — активные закрепления читателя
+- <code>book.copies.all()</code> — все экземпляры книги в залах
+- <code>author.books.count()</code> — количество книг автора</p>
+<h2 id="manytomany">Работа с ManyToMany связями</h2>
+<h3 id="book-author-manytomany">Связь Book ↔ Author (ManyToMany)</h3>
+<ul>
+<li>Реализована через стандартное поле <code>ManyToManyField</code></li>
+<li>В сериализаторе <code>BookSerializer</code> используется <code>authors_detail</code> для получения вложенных объектов авторов</li>
+<li>В сериализаторе <code>AuthorSerializer</code> вычисляется <code>books_count</code> через <code>obj.books.count()</code></li>
+</ul>
+<h3 id="book-readinghall-manytomany">Связь Book ↔ ReadingHall (ManyToMany через промежуточную модель)</h3>
+<ul>
+<li>Реализована через промежуточную модель <code>BookCopy</code></li>
+<li>Позволяет хранить дополнительную информацию (количество экземпляров) для каждой пары книга-зал</li>
+<li>В сериализаторе <code>BookSerializer</code> используется <code>copies_detail</code> для получения списка экземпляров с информацией о залах</li>
+<li>В сериализаторе <code>ReadingHallSerializer</code> вычисляется <code>books_count</code> через <code>obj.book_copies.filter(quantity__gt=0).count()</code></li>
+</ul>
+<h2 id="-django">Админ-панель Django</h2>
+<p>Все модели зарегистрированы в админ-панели с настройками:</p>
+<h3 id="authoradmin">AuthorAdmin</h3>
+<ul>
+<li>Отображение: <code>name</code></li>
+<li>Поиск: по имени</li>
+</ul>
+<h3 id="readinghalladmin">ReadingHallAdmin</h3>
+<ul>
+<li>Отображение: <code>number</code>, <code>name</code>, <code>capacity</code></li>
+<li>Поиск: по названию и номеру</li>
+</ul>
+<h3 id="readeradmin">ReaderAdmin</h3>
+<ul>
+<li>Отображение: <code>ticket_number</code>, <code>full_name</code>, <code>reading_hall</code>, <code>education</code>, <code>is_active</code></li>
+<li>Фильтры: по образованию, наличию степени, активности, залу</li>
+<li>Поиск: по номеру билета, ФИО, номеру паспорта</li>
+</ul>
+<h3 id="bookadmin">BookAdmin</h3>
+<ul>
+<li>Отображение: <code>code</code>, <code>title</code>, <code>publisher</code>, <code>publication_year</code>, <code>section</code></li>
+<li>Фильтры: по разделу и году издания</li>
+<li>Поиск: по названию, шифру, издательству</li>
+<li>Горизонтальный фильтр для выбора авторов (<code>filter_horizontal</code>)</li>
+</ul>
+<h3 id="bookcopyadmin">BookCopyAdmin</h3>
+<ul>
+<li>Отображение: <code>book</code>, <code>reading_hall</code>, <code>quantity</code></li>
+<li>Фильтры: по залу</li>
+<li>Поиск: по названию и шифру книги</li>
+</ul>
+<h3 id="bookassignmentadmin">BookAssignmentAdmin</h3>
+<ul>
+<li>Отображение: <code>book</code>, <code>reader</code>, <code>assignment_date</code>, <code>is_returned</code></li>
+<li>Фильтры: по статусу возврата и дате закрепления</li>
+<li>Поиск: по названию книги, ФИО и номеру билета читателя</li>
+</ul>
+<h2 id="_8">Заключение</h2>
+<p>В ходе выполнения лабораторной работы была реализована полнофункциональная система управления библиотекой с использованием Django REST Framework:</p>
+<ol>
+<li><strong>Модели данных</strong> — спроектированы с учетом нормализации и правильного использования связей (ForeignKey, ManyToMany) с настроенными <code>related_name</code></li>
+<li><strong>API endpoints</strong> — реализованы все необходимые CRUD-операции для всех сущностей</li>
+<li><strong>Вложенные объекты</strong> — реализованы endpoints и сериализаторы для получения связанных объектов (один-ко-многим и многие-ко-многим)</li>
+<li><strong>Аналитические запросы</strong> — реализованы все запросы согласно ТЗ с использованием Django ORM (агрегация, фильтрация)</li>
+<li><strong>Операции библиотекаря</strong> — реализованы все необходимые операции для управления библиотекой</li>
+<li><strong>Отчеты</strong> — реализован генератор месячных отчетов с детальной статистикой</li>
+<li><strong>Аутентификация</strong> — интегрирована система аутентификации через Djoser с токенами</li>
+<li><strong>Документация</strong> — настроена Swagger документация для всех endpoints</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
